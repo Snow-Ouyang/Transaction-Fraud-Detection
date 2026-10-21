@@ -1,0 +1,1023 @@
+{
+  "experiment": "v3_fixed10_capacity_catboost_xgboost",
+  "selections": {
+    "catboost": {
+      "family": "catboost",
+      "parameter_decision": {
+        "family": "catboost",
+        "search_winner": "CB5",
+        "best_complex_candidate": "CB5",
+        "ranked": [
+          {
+            "run_id": "CB5",
+            "config": {
+              "id": "CB5",
+              "iterations": 500,
+              "depth": 10,
+              "l2_leaf_reg": 30
+            },
+            "mean_delta_per_10000": -18330.27574711097,
+            "worst_delta_per_10000": -30486.834116615326,
+            "windows_above_always_normal": 0
+          },
+          {
+            "run_id": "CB4",
+            "config": {
+              "id": "CB4",
+              "iterations": 1000,
+              "depth": 8,
+              "l2_leaf_reg": 30
+            },
+            "mean_delta_per_10000": -18386.216935395783,
+            "worst_delta_per_10000": -30622.877830496276,
+            "windows_above_always_normal": 0
+          },
+          {
+            "run_id": "CB3",
+            "config": {
+              "id": "CB3",
+              "iterations": 1000,
+              "depth": 8,
+              "l2_leaf_reg": 10
+            },
+            "mean_delta_per_10000": -18414.587030634215,
+            "worst_delta_per_10000": -30542.375930381597,
+            "windows_above_always_normal": 0
+          },
+          {
+            "run_id": "CB2",
+            "config": {
+              "id": "CB2",
+              "iterations": 500,
+              "depth": 8,
+              "l2_leaf_reg": 10
+            },
+            "mean_delta_per_10000": -18430.616734887113,
+            "worst_delta_per_10000": -30462.54862719525,
+            "windows_above_always_normal": 0
+          },
+          {
+            "run_id": "CB1",
+            "config": {
+              "id": "CB1",
+              "iterations": 1000,
+              "depth": 6,
+              "l2_leaf_reg": 10
+            },
+            "mean_delta_per_10000": -18521.5270319392,
+            "worst_delta_per_10000": -30439.61233163185,
+            "windows_above_always_normal": 0
+          },
+          {
+            "run_id": "CB0",
+            "config": {
+              "id": "CB0",
+              "iterations": 500,
+              "depth": 6,
+              "l2_leaf_reg": 10
+            },
+            "mean_delta_per_10000": -18571.599302695726,
+            "worst_delta_per_10000": -30493.355220255897,
+            "windows_above_always_normal": 0
+          }
+        ],
+        "locked_utc": "2026-10-21T19:57:39+00:00"
+      },
+      "branches": [
+        {
+          "base": "CB0",
+          "accepted_individual_groups": [],
+          "eligible_runs": [
+            "CB0"
+          ],
+          "final_run": "CB0"
+        },
+        {
+          "base": "CB5",
+          "accepted_individual_groups": [],
+          "eligible_runs": [
+            "CB5"
+          ],
+          "final_run": "CB5"
+        }
+      ],
+      "group_results": [
+        {
+          "family": "catboost",
+          "branch": "CB0",
+          "group": "age_weekday",
+          "group_name": "年龄与星期",
+          "run_id": "CB0__age_weekday",
+          "feature_count": 12,
+          "changes_per_10000": {
+            "D1": 135.14425130984455,
+            "D2": -315.2741723552226,
+            "D3": -113.87314047584368
+          },
+          "mean_paired_change_per_10000": -98.00102050707392,
+          "improved_windows": 1,
+          "accepted": false
+        },
+        {
+          "family": "catboost",
+          "branch": "CB0",
+          "group": "merchant",
+          "group_name": "商户名称",
+          "run_id": "CB0__merchant",
+          "feature_count": 11,
+          "changes_per_10000": {
+            "D1": -149.0859211621064,
+            "D2": 148.22292728263164,
+            "D3": -7.268498328245187
+          },
+          "mean_paired_change_per_10000": -2.71049740257331,
+          "improved_windows": 1,
+          "accepted": false
+        },
+        {
+          "family": "catboost",
+          "branch": "CB0",
+          "group": "identity",
+          "group_name": "职业、城市、邮编",
+          "run_id": "CB0__identity",
+          "feature_count": 13,
+          "changes_per_10000": {
+            "D1": -388.1180994355818,
+            "D2": -1083.2291766817307,
+            "D3": -390.07607694916805
+          },
+          "mean_paired_change_per_10000": -620.4744510221602,
+          "improved_windows": 0,
+          "accepted": false
+        },
+        {
+          "family": "catboost",
+          "branch": "CB5",
+          "group": "age_weekday",
+          "group_name": "年龄与星期",
+          "run_id": "CB5__age_weekday",
+          "feature_count": 12,
+          "changes_per_10000": {
+            "D1": 157.85568123046687,
+            "D2": -336.9067076883639,
+            "D3": -72.07927508843568
+          },
+          "mean_paired_change_per_10000": -83.71010051544424,
+          "improved_windows": 1,
+          "accepted": false
+        },
+        {
+          "family": "catboost",
+          "branch": "CB5",
+          "group": "merchant",
+          "group_name": "商户名称",
+          "run_id": "CB5__merchant",
+          "feature_count": 11,
+          "changes_per_10000": {
+            "D1": -124.80043174203456,
+            "D2": -239.15969618305826,
+            "D3": -52.69661287977942
+          },
+          "mean_paired_change_per_10000": -138.88558026829074,
+          "improved_windows": 0,
+          "accepted": false
+        },
+        {
+          "family": "catboost",
+          "branch": "CB5",
+          "group": "identity",
+          "group_name": "职业、城市、邮编",
+          "run_id": "CB5__identity",
+          "feature_count": 13,
+          "changes_per_10000": {
+            "D1": -508.64608396483527,
+            "D2": -949.4279396211896,
+            "D3": -697.1701313175399
+          },
+          "mean_paired_change_per_10000": -718.4147183011883,
+          "improved_windows": 0,
+          "accepted": false
+        }
+      ],
+      "final_run": "CB5",
+      "final_features": [
+        "amt",
+        "category",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant"
+      ],
+      "all_run_ids": [
+        "CB0",
+        "CB1",
+        "CB2",
+        "CB3",
+        "CB4",
+        "CB5",
+        "CB0__age_weekday",
+        "CB0__merchant",
+        "CB0__identity",
+        "CB5__age_weekday",
+        "CB5__merchant",
+        "CB5__identity"
+      ],
+      "locked_utc": "2026-10-21T20:29:11+00:00",
+      "no_june_scores_generated": true,
+      "manifest_sha256": "268c2d611675e9d83512462e7651d696081bdf9b7b12affa7296636705db696e"
+    },
+    "xgboost": {
+      "family": "xgboost",
+      "parameter_decision": {
+        "family": "xgboost",
+        "search_winner": "X5",
+        "best_complex_candidate": null,
+        "ranked": [
+          {
+            "run_id": "X5",
+            "config": {
+              "id": "X5",
+              "n_estimators": 500,
+              "max_depth": 10,
+              "reg_lambda": 30,
+              "min_child_weight": 5
+            },
+            "mean_delta_per_10000": -17956.89798386605,
+            "worst_delta_per_10000": -30910.930718895463,
+            "windows_above_always_normal": 1
+          },
+          {
+            "run_id": "X3",
+            "config": {
+              "id": "X3",
+              "n_estimators": 1000,
+              "max_depth": 8,
+              "reg_lambda": 10,
+              "min_child_weight": 1
+            },
+            "mean_delta_per_10000": -18085.206207905572,
+            "worst_delta_per_10000": -30646.03899170246,
+            "windows_above_always_normal": 0
+          },
+          {
+            "run_id": "X2",
+            "config": {
+              "id": "X2",
+              "n_estimators": 500,
+              "max_depth": 8,
+              "reg_lambda": 10,
+              "min_child_weight": 1
+            },
+            "mean_delta_per_10000": -18180.58578467691,
+            "worst_delta_per_10000": -30644.46493220301,
+            "windows_above_always_normal": 0
+          },
+          {
+            "run_id": "X0",
+            "config": {
+              "id": "X0",
+              "n_estimators": 500,
+              "max_depth": 6,
+              "reg_lambda": 10,
+              "min_child_weight": 1
+            },
+            "mean_delta_per_10000": -18323.813794548274,
+            "worst_delta_per_10000": -30701.131074183173,
+            "windows_above_always_normal": 0
+          },
+          {
+            "run_id": "X4",
+            "config": {
+              "id": "X4",
+              "n_estimators": 1000,
+              "max_depth": 8,
+              "reg_lambda": 30,
+              "min_child_weight": 5
+            },
+            "mean_delta_per_10000": -18465.207664280282,
+            "worst_delta_per_10000": -30915.877763036588,
+            "windows_above_always_normal": 0
+          },
+          {
+            "run_id": "X1",
+            "config": {
+              "id": "X1",
+              "n_estimators": 1000,
+              "max_depth": 6,
+              "reg_lambda": 10,
+              "min_child_weight": 1
+            },
+            "mean_delta_per_10000": -18470.856729751136,
+            "worst_delta_per_10000": -30556.992197162195,
+            "windows_above_always_normal": 0
+          }
+        ],
+        "locked_utc": "2026-10-21T19:34:17+00:00"
+      },
+      "branches": [
+        {
+          "base": "X5",
+          "accepted_individual_groups": [
+            "age_weekday",
+            "merchant"
+          ],
+          "eligible_runs": [
+            "X5",
+            "X5__age_weekday",
+            "X5__merchant",
+            "X5__combined"
+          ],
+          "final_run": "X5__combined"
+        }
+      ],
+      "group_results": [
+        {
+          "family": "xgboost",
+          "branch": "X5",
+          "group": "age_weekday",
+          "group_name": "年龄与星期",
+          "run_id": "X5__age_weekday",
+          "feature_count": 12,
+          "changes_per_10000": {
+            "D1": 169.32382901216624,
+            "D2": 2102.3619523763746,
+            "D3": 112.05601589378057
+          },
+          "mean_paired_change_per_10000": 794.5805990941071,
+          "improved_windows": 3,
+          "accepted": true
+        },
+        {
+          "family": "xgboost",
+          "branch": "X5",
+          "group": "merchant",
+          "group_name": "商户名称",
+          "run_id": "X5__merchant",
+          "feature_count": 11,
+          "changes_per_10000": {
+            "D1": -79.82730318635004,
+            "D2": 134.60244207287724,
+            "D3": 26.04545234287798
+          },
+          "mean_paired_change_per_10000": 26.940197076468394,
+          "improved_windows": 2,
+          "accepted": true
+        },
+        {
+          "family": "xgboost",
+          "branch": "X5",
+          "group": "identity",
+          "group_name": "职业、城市、邮编",
+          "run_id": "X5__identity",
+          "feature_count": 13,
+          "changes_per_10000": {
+            "D1": -302.6691551797776,
+            "D2": -559.6417011184822,
+            "D3": -76.31923244658174
+          },
+          "mean_paired_change_per_10000": -312.8766962482805,
+          "improved_windows": 0,
+          "accepted": false
+        },
+        {
+          "family": "xgboost",
+          "branch": "X5",
+          "group": "combined",
+          "group_name": "通过组的合并检验",
+          "run_id": "X5__combined",
+          "feature_count": 13,
+          "changes_per_10000": {
+            "D1": 475.8157001191794,
+            "D2": 2292.247540300613,
+            "D3": 179.8953336240702
+          },
+          "mean_paired_change_per_10000": 982.6528580146208,
+          "improved_windows": 3,
+          "accepted": true
+        }
+      ],
+      "final_run": "X5__combined",
+      "final_features": [
+        "amt",
+        "category",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant"
+      ],
+      "all_run_ids": [
+        "X0",
+        "X1",
+        "X2",
+        "X3",
+        "X4",
+        "X5",
+        "X5__age_weekday",
+        "X5__merchant",
+        "X5__identity",
+        "X5__combined"
+      ],
+      "locked_utc": "2026-10-21T19:40:54+00:00",
+      "no_june_scores_generated": true,
+      "manifest_sha256": "268c2d611675e9d83512462e7651d696081bdf9b7b12affa7296636705db696e"
+    }
+  },
+  "run_ids": [
+    "CB0",
+    "CB1",
+    "CB2",
+    "CB3",
+    "CB4",
+    "CB5",
+    "CB0__age_weekday",
+    "CB0__merchant",
+    "CB0__identity",
+    "CB5__age_weekday",
+    "CB5__merchant",
+    "CB5__identity",
+    "X0",
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5",
+    "X5__age_weekday",
+    "X5__merchant",
+    "X5__identity",
+    "X5__combined"
+  ],
+  "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+  "june": [
+    {
+      "run_id": "CB5",
+      "family": "catboost",
+      "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+      "generated_utc": "2026-10-21T20:29:19+00:00",
+      "role": "reused_diagnostic_not_blind_test",
+      "selected": {
+        "n": 87778,
+        "fraud": 474,
+        "normal": 87304,
+        "threshold": 0.009870757814801014,
+        "TP": 430,
+        "FP": 87304,
+        "FN": 44,
+        "TN": 0,
+        "flags": 87734,
+        "utility": -419420,
+        "always_normal_utility": -47400,
+        "delta_vs_always_normal": -372020,
+        "utility_per_10000": -47781.90434960925,
+        "delta_per_10000": -42381.91802046071,
+        "precision": 0.004901178562472929,
+        "recall": 0.9071729957805907,
+        "false_positive_rate": 1.0,
+        "false_positives_per_10000_normal": 10000.0,
+        "accuracy": 0.00489872177538791,
+        "f1": 0.009749682568474515,
+        "average_precision": 0.21363071156205268,
+        "roc_auc": 0.5426622421445254,
+        "logloss": 4.136181878710648,
+        "brier_score": 0.9510091775617318,
+        "true_positive_gain": 21500,
+        "false_negative_cost": -4400,
+        "false_positive_cost": -436520
+      },
+      "unknown_categories": {
+        "category": 0,
+        "hour": 0
+      }
+    },
+    {
+      "run_id": "CB0",
+      "family": "catboost",
+      "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+      "generated_utc": "2026-10-21T20:29:20+00:00",
+      "role": "reused_diagnostic_not_blind_test",
+      "selected": {
+        "n": 87778,
+        "fraud": 474,
+        "normal": 87304,
+        "threshold": 0.008524021687870888,
+        "TP": 424,
+        "FP": 87304,
+        "FN": 50,
+        "TN": 0,
+        "flags": 87728,
+        "utility": -420320,
+        "always_normal_utility": -47400,
+        "delta_vs_always_normal": -372920,
+        "utility_per_10000": -47884.43573560573,
+        "delta_per_10000": -42484.4494064572,
+        "precision": 0.004833120554441,
+        "recall": 0.8945147679324894,
+        "false_positive_rate": 1.0,
+        "false_positives_per_10000_normal": 10000.0,
+        "accuracy": 0.004830367518056916,
+        "f1": 0.009614294460443073,
+        "average_precision": 0.05508903636917759,
+        "roc_auc": 0.4290261904568584,
+        "logloss": 5.359881423247135,
+        "brier_score": 0.9666021213279892,
+        "true_positive_gain": 21200,
+        "false_negative_cost": -5000,
+        "false_positive_cost": -436520
+      },
+      "unknown_categories": {
+        "category": 0,
+        "hour": 0
+      }
+    },
+    {
+      "run_id": "CB0__age_weekday",
+      "family": "catboost",
+      "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+      "generated_utc": "2026-10-21T20:29:20+00:00",
+      "role": "reused_diagnostic_not_blind_test",
+      "selected": {
+        "n": 87778,
+        "fraud": 474,
+        "normal": 87304,
+        "threshold": 0.016170625243606462,
+        "TP": 417,
+        "FP": 87304,
+        "FN": 57,
+        "TN": 0,
+        "flags": 87721,
+        "utility": -421370,
+        "always_normal_utility": -47400,
+        "delta_vs_always_normal": -373970,
+        "utility_per_10000": -48004.055685934974,
+        "delta_per_10000": -42604.06935678644,
+        "precision": 0.004753707778069105,
+        "recall": 0.879746835443038,
+        "false_positive_rate": 1.0,
+        "false_positives_per_10000_normal": 10000.0,
+        "accuracy": 0.004750620884504089,
+        "f1": 0.009456318385395998,
+        "average_precision": 0.10902654416501027,
+        "roc_auc": 0.5140063470927138,
+        "logloss": 4.626497417387286,
+        "brier_score": 0.9485117539050886,
+        "true_positive_gain": 20850,
+        "false_negative_cost": -5700,
+        "false_positive_cost": -436520
+      },
+      "unknown_categories": {
+        "category": 0,
+        "hour": 0,
+        "weekday": 0
+      }
+    },
+    {
+      "run_id": "CB0__merchant",
+      "family": "catboost",
+      "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+      "generated_utc": "2026-10-21T20:29:21+00:00",
+      "role": "reused_diagnostic_not_blind_test",
+      "selected": {
+        "n": 87778,
+        "fraud": 474,
+        "normal": 87304,
+        "threshold": 0.008766600119093006,
+        "TP": 429,
+        "FP": 87304,
+        "FN": 45,
+        "TN": 0,
+        "flags": 87733,
+        "utility": -419570,
+        "always_normal_utility": -47400,
+        "delta_vs_always_normal": -372170,
+        "utility_per_10000": -47798.99291394199,
+        "delta_per_10000": -42399.00658479345,
+        "precision": 0.004889836207584376,
+        "recall": 0.9050632911392406,
+        "false_positive_rate": 1.0,
+        "false_positives_per_10000_normal": 10000.0,
+        "accuracy": 0.004887329399166078,
+        "f1": 0.00972711916287823,
+        "average_precision": 0.08618804429213775,
+        "roc_auc": 0.5136623577500763,
+        "logloss": 4.6978346300526965,
+        "brier_score": 0.9479062574104618,
+        "true_positive_gain": 21450,
+        "false_negative_cost": -4500,
+        "false_positive_cost": -436520
+      },
+      "unknown_categories": {
+        "category": 0,
+        "hour": 0,
+        "merchant": 2618
+      }
+    },
+    {
+      "run_id": "CB0__identity",
+      "family": "catboost",
+      "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+      "generated_utc": "2026-10-21T20:29:22+00:00",
+      "role": "reused_diagnostic_not_blind_test",
+      "selected": {
+        "n": 87778,
+        "fraud": 474,
+        "normal": 87304,
+        "threshold": 0.085172284205741,
+        "TP": 403,
+        "FP": 87304,
+        "FN": 71,
+        "TN": 0,
+        "flags": 87707,
+        "utility": -423470,
+        "always_normal_utility": -47400,
+        "delta_vs_always_normal": -376070,
+        "utility_per_10000": -48243.29558659345,
+        "delta_per_10000": -42843.30925744492,
+        "precision": 0.004594844197156441,
+        "recall": 0.8502109704641351,
+        "false_positive_rate": 1.0,
+        "false_positives_per_10000_normal": 10000.0,
+        "accuracy": 0.004591127617398437,
+        "f1": 0.009140290992390651,
+        "average_precision": 0.022306540269261748,
+        "roc_auc": 0.3533258441041749,
+        "logloss": 6.094500285892321,
+        "brier_score": 0.9758788169785899,
+        "true_positive_gain": 20150,
+        "false_negative_cost": -7100,
+        "false_positive_cost": -436520
+      },
+      "unknown_categories": {
+        "category": 0,
+        "hour": 0,
+        "job": 11,
+        "city": 0,
+        "zip": 11
+      }
+    },
+    {
+      "run_id": "CB5__age_weekday",
+      "family": "catboost",
+      "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+      "generated_utc": "2026-10-21T20:29:22+00:00",
+      "role": "reused_diagnostic_not_blind_test",
+      "selected": {
+        "n": 87778,
+        "fraud": 474,
+        "normal": 87304,
+        "threshold": 0.008481865670544734,
+        "TP": 426,
+        "FP": 87304,
+        "FN": 48,
+        "TN": 0,
+        "flags": 87730,
+        "utility": -420020,
+        "always_normal_utility": -47400,
+        "delta_vs_always_normal": -372620,
+        "utility_per_10000": -47850.25860694024,
+        "delta_per_10000": -42450.2722777917,
+        "precision": 0.004855807591473841,
+        "recall": 0.8987341772151899,
+        "false_positive_rate": 1.0,
+        "false_positives_per_10000_normal": 10000.0,
+        "accuracy": 0.004853152270500581,
+        "f1": 0.009659425876377489,
+        "average_precision": 0.19050552111281627,
+        "roc_auc": 0.6092178607869453,
+        "logloss": 3.564295594567921,
+        "brier_score": 0.8959963990108216,
+        "true_positive_gain": 21300,
+        "false_negative_cost": -4800,
+        "false_positive_cost": -436520
+      },
+      "unknown_categories": {
+        "category": 0,
+        "hour": 0,
+        "weekday": 0
+      }
+    },
+    {
+      "run_id": "CB5__merchant",
+      "family": "catboost",
+      "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+      "generated_utc": "2026-10-21T20:29:23+00:00",
+      "role": "reused_diagnostic_not_blind_test",
+      "selected": {
+        "n": 87778,
+        "fraud": 474,
+        "normal": 87304,
+        "threshold": 0.010868755200436168,
+        "TP": 425,
+        "FP": 87304,
+        "FN": 49,
+        "TN": 0,
+        "flags": 87729,
+        "utility": -420170,
+        "always_normal_utility": -47400,
+        "delta_vs_always_normal": -372770,
+        "utility_per_10000": -47867.34717127298,
+        "delta_per_10000": -42467.36084212445,
+        "precision": 0.00484446420225923,
+        "recall": 0.8966244725738397,
+        "false_positive_rate": 1.0,
+        "false_positives_per_10000_normal": 10000.0,
+        "accuracy": 0.0048417598942787484,
+        "f1": 0.009636860424248609,
+        "average_precision": 0.3453960744451636,
+        "roc_auc": 0.6109768098744925,
+        "logloss": 3.7733605229610587,
+        "brier_score": 0.9370270570206823,
+        "true_positive_gain": 21250,
+        "false_negative_cost": -4900,
+        "false_positive_cost": -436520
+      },
+      "unknown_categories": {
+        "category": 0,
+        "hour": 0,
+        "merchant": 2618
+      }
+    },
+    {
+      "run_id": "CB5__identity",
+      "family": "catboost",
+      "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+      "generated_utc": "2026-10-21T20:29:24+00:00",
+      "role": "reused_diagnostic_not_blind_test",
+      "selected": {
+        "n": 87778,
+        "fraud": 474,
+        "normal": 87304,
+        "threshold": 0.08817013105102098,
+        "TP": 406,
+        "FP": 87304,
+        "FN": 68,
+        "TN": 0,
+        "flags": 87710,
+        "utility": -423020,
+        "always_normal_utility": -47400,
+        "delta_vs_always_normal": -375620,
+        "utility_per_10000": -48192.0298935952,
+        "delta_per_10000": -42792.04356444668,
+        "precision": 0.004628890662410215,
+        "recall": 0.8565400843881856,
+        "false_positive_rate": 1.0,
+        "false_positives_per_10000_normal": 10000.0,
+        "accuracy": 0.004625304746063934,
+        "f1": 0.009208019595391454,
+        "average_precision": 0.09529426889229314,
+        "roc_auc": 0.43250571454862996,
+        "logloss": 4.459893592149108,
+        "brier_score": 0.9513981341188906,
+        "true_positive_gain": 20300,
+        "false_negative_cost": -6800,
+        "false_positive_cost": -436520
+      },
+      "unknown_categories": {
+        "category": 0,
+        "hour": 0,
+        "job": 11,
+        "city": 0,
+        "zip": 11
+      }
+    },
+    {
+      "run_id": "X5",
+      "family": "xgboost",
+      "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+      "generated_utc": "2026-10-21T20:29:25+00:00",
+      "role": "reused_diagnostic_not_blind_test",
+      "selected": {
+        "n": 87778,
+        "fraud": 474,
+        "normal": 87304,
+        "threshold": 0.05326852388679981,
+        "TP": 426,
+        "FP": 87297,
+        "FN": 48,
+        "TN": 7,
+        "flags": 87723,
+        "utility": -419985,
+        "always_normal_utility": -47400,
+        "delta_vs_always_normal": -372585,
+        "utility_per_10000": -47846.271275262596,
+        "delta_per_10000": -42446.28494611406,
+        "precision": 0.004856195068568107,
+        "recall": 0.8987341772151899,
+        "false_positive_rate": 0.9999198203976908,
+        "false_positives_per_10000_normal": 9999.198203976908,
+        "accuracy": 0.0049328989040534075,
+        "f1": 0.009660192523555223,
+        "average_precision": 0.27160903192939634,
+        "roc_auc": 0.7152394600795475,
+        "logloss": 1.4131142145018425,
+        "brier_score": 0.45323003971958775,
+        "true_positive_gain": 21300,
+        "false_negative_cost": -4800,
+        "false_positive_cost": -436485
+      },
+      "unknown_categories": {
+        "category": 0,
+        "hour": 0
+      }
+    },
+    {
+      "run_id": "X5__combined",
+      "family": "xgboost",
+      "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+      "generated_utc": "2026-10-21T20:29:26+00:00",
+      "role": "reused_diagnostic_not_blind_test",
+      "selected": {
+        "n": 87778,
+        "fraud": 474,
+        "normal": 87304,
+        "threshold": 0.03609329275786877,
+        "TP": 423,
+        "FP": 87088,
+        "FN": 51,
+        "TN": 216,
+        "flags": 87511,
+        "utility": -419390,
+        "always_normal_utility": -47400,
+        "delta_vs_always_normal": -371990,
+        "utility_per_10000": -47778.48663674269,
+        "delta_per_10000": -42378.500307594164,
+        "precision": 0.004833678051902047,
+        "recall": 0.8924050632911392,
+        "false_positive_rate": 0.997525886557317,
+        "false_positives_per_10000_normal": 9975.25886557317,
+        "accuracy": 0.007279728405750871,
+        "f1": 0.009615275331022334,
+        "average_precision": 0.15343114214792813,
+        "roc_auc": 0.7061492486992442,
+        "logloss": 1.6278993119993745,
+        "brier_score": 0.478767515241317,
+        "true_positive_gain": 21150,
+        "false_negative_cost": -5100,
+        "false_positive_cost": -435440
+      },
+      "unknown_categories": {
+        "category": 0,
+        "hour": 0,
+        "weekday": 0,
+        "merchant": 2618
+      }
+    },
+    {
+      "run_id": "X5__age_weekday",
+      "family": "xgboost",
+      "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+      "generated_utc": "2026-10-21T20:29:26+00:00",
+      "role": "reused_diagnostic_not_blind_test",
+      "selected": {
+        "n": 87778,
+        "fraud": 474,
+        "normal": 87304,
+        "threshold": 0.03364535793662071,
+        "TP": 430,
+        "FP": 87304,
+        "FN": 44,
+        "TN": 0,
+        "flags": 87734,
+        "utility": -419420,
+        "always_normal_utility": -47400,
+        "delta_vs_always_normal": -372020,
+        "utility_per_10000": -47781.90434960925,
+        "delta_per_10000": -42381.91802046071,
+        "precision": 0.004901178562472929,
+        "recall": 0.9071729957805907,
+        "false_positive_rate": 1.0,
+        "false_positives_per_10000_normal": 10000.0,
+        "accuracy": 0.00489872177538791,
+        "f1": 0.009749682568474515,
+        "average_precision": 0.15368153745982757,
+        "roc_auc": 0.6795888371628155,
+        "logloss": 2.0431793961735067,
+        "brier_score": 0.5951278319776204,
+        "true_positive_gain": 21500,
+        "false_negative_cost": -4400,
+        "false_positive_cost": -436520
+      },
+      "unknown_categories": {
+        "category": 0,
+        "hour": 0,
+        "weekday": 0
+      }
+    },
+    {
+      "run_id": "X5__merchant",
+      "family": "xgboost",
+      "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+      "generated_utc": "2026-10-21T20:29:27+00:00",
+      "role": "reused_diagnostic_not_blind_test",
+      "selected": {
+        "n": 87778,
+        "fraud": 474,
+        "normal": 87304,
+        "threshold": 0.043834416195750237,
+        "TP": 428,
+        "FP": 87303,
+        "FN": 46,
+        "TN": 1,
+        "flags": 87731,
+        "utility": -419715,
+        "always_normal_utility": -47400,
+        "delta_vs_always_normal": -372315,
+        "utility_per_10000": -47815.511859463644,
+        "delta_per_10000": -42415.52553031511,
+        "precision": 0.004878549201536515,
+        "recall": 0.9029535864978903,
+        "false_positive_rate": 0.9999885457710986,
+        "false_positives_per_10000_normal": 9999.885457710987,
+        "accuracy": 0.004887329399166078,
+        "f1": 0.00970466526840882,
+        "average_precision": 0.21630885494722296,
+        "roc_auc": 0.6992901712856691,
+        "logloss": 1.4258504316919762,
+        "brier_score": 0.4494068937171061,
+        "true_positive_gain": 21400,
+        "false_negative_cost": -4600,
+        "false_positive_cost": -436515
+      },
+      "unknown_categories": {
+        "category": 0,
+        "hour": 0,
+        "merchant": 2618
+      }
+    },
+    {
+      "run_id": "X5__identity",
+      "family": "xgboost",
+      "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+      "generated_utc": "2026-10-21T20:29:28+00:00",
+      "role": "reused_diagnostic_not_blind_test",
+      "selected": {
+        "n": 87778,
+        "fraud": 474,
+        "normal": 87304,
+        "threshold": 0.03254704549908638,
+        "TP": 421,
+        "FP": 87286,
+        "FN": 53,
+        "TN": 18,
+        "flags": 87707,
+        "utility": -420680,
+        "always_normal_utility": -47400,
+        "delta_vs_always_normal": -373280,
+        "utility_per_10000": -47925.44829000433,
+        "delta_per_10000": -42525.46196085579,
+        "precision": 0.004800072970230426,
+        "recall": 0.8881856540084389,
+        "false_positive_rate": 0.9997938238797764,
+        "false_positives_per_10000_normal": 9997.938238797764,
+        "accuracy": 0.005001253161384401,
+        "f1": 0.009548542202968894,
+        "average_precision": 0.20805713845805246,
+        "roc_auc": 0.691557116874892,
+        "logloss": 1.3072778491434107,
+        "brier_score": 0.4084674149853563,
+        "true_positive_gain": 21050,
+        "false_negative_cost": -5300,
+        "false_positive_cost": -436430
+      },
+      "unknown_categories": {
+        "category": 0,
+        "hour": 0,
+        "job": 11,
+        "city": 0,
+        "zip": 11
+      }
+    }
+  ],
+  "runtime": {
+    "python": "3.13.5",
+    "catboost": "1.2.8",
+    "xgboost": "3.2.0",
+    "pandas": "2.2.3",
+    "numpy": "2.1.3",
+    "executable": "C:\\ProgramData\\anaconda3\\python.exe"
+  },
+  "checks": {
+    "sources_unchanged": true,
+    "code_unchanged": true,
+    "selection_locks_unchanged": true,
+    "global_selection_lock_unchanged": true,
+    "all_model_reload_checks_passed": true,
+    "both_six_candidate_searches_complete": true,
+    "no_official_test_features_loaded": true,
+    "all_input_feature_sets_exclude_labels_dates_and_raw_identity": true
+  },
+  "completed_utc": "2026-10-21T20:29:28+00:00",
+  "new_model_fits": 57,
+  "reused_model_fits": 9,
+  "total_checkpoints": 66,
+  "manifest_sha256": "268c2d611675e9d83512462e7651d696081bdf9b7b12affa7296636705db696e"
+}

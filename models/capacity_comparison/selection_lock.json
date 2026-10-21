@@ -1,0 +1,29 @@
+{
+  "manifest_sha256": "268c2d611675e9d83512462e7651d696081bdf9b7b12affa7296636705db696e",
+  "family_selection_hashes": {
+    "catboost": "766ec53774f4bff57ed3cb6c62bed332d5aef415f83fcb79319aca9d61b10d11",
+    "xgboost": "d56b8e6dd5e7dd43caf00a42668be8ee29cc50cbd4ad7ea45ef88e432432d443"
+  },
+  "final_runs": {
+    "catboost": "CB5",
+    "xgboost": "X5__combined"
+  },
+  "june_diagnostic_runs": [
+    "CB5",
+    "CB0",
+    "CB0__age_weekday",
+    "CB0__merchant",
+    "CB0__identity",
+    "CB5__age_weekday",
+    "CB5__merchant",
+    "CB5__identity",
+    "X5",
+    "X5__combined",
+    "X5__age_weekday",
+    "X5__merchant",
+    "X5__identity"
+  ],
+  "locked_utc": "2026-10-21T20:29:17+00:00",
+  "june_previously_observed": true,
+  "no_new_independent_test": true
+}

@@ -1,0 +1,36 @@
+﻿check,train,test
+rows,1402996,469843
+columns,23,22
+missing_cells,0,0
+duplicate_full_rows,0,0
+duplicate_business_rows_excluding_ID,0,0
+duplicate_trans_num,0,0
+duplicate_ID,0,0
+time_min,2024-01-01 00:00:00,2025-07-01 00:00:25
+time_max,2025-06-30 23:59:39,2025-12-31 23:59:10
+text_time_parse_failures,0,0
+dob_parse_failures,0,0
+unix_time_parse_failures,0,0
+text_unix_second_mismatch,0,461957
+text_unix_minute_mismatch,0,0
+out_of_order_unix_steps,159,0
+out_of_order_text_steps,159,0
+largest_backward_seconds,-3600,0
+duplicate_timestamp_rows,40441,13428
+negative_or_zero_amount_rows,0,0
+negative_population_rows,0,0
+nonfinite_numeric_cells,0,0
+age_outside_0_110_rows,0,0
+invalid_latitude_rows,0,0
+invalid_longitude_rows,0,0
+cc_num_scientific_rows,0,466881
+cc_num_non_digit_rows,0,466881
+zip_less_than_5_char_rows,94123,35355
+trans_num_not_32_hex_rows,0,0
+merchant_fraud_prefix_rows,1402996,469843
+unique_customers_static_key,1099,1097
+memory_mib_loaded_and_derived,697.8118267059326,229.17473697662354
+fraud,10593,
+normal,1392403,
+fraud_rate,0.007550270991506747,
+label_values,"[0, 1]",

@@ -1,0 +1,41 @@
+{
+  "run_id": "X5__age_weekday",
+  "family": "xgboost",
+  "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+  "generated_utc": "2026-10-21T20:29:26+00:00",
+  "role": "reused_diagnostic_not_blind_test",
+  "selected": {
+    "n": 87778,
+    "fraud": 474,
+    "normal": 87304,
+    "threshold": 0.03364535793662071,
+    "TP": 430,
+    "FP": 87304,
+    "FN": 44,
+    "TN": 0,
+    "flags": 87734,
+    "utility": -419420,
+    "always_normal_utility": -47400,
+    "delta_vs_always_normal": -372020,
+    "utility_per_10000": -47781.90434960925,
+    "delta_per_10000": -42381.91802046071,
+    "precision": 0.004901178562472929,
+    "recall": 0.9071729957805907,
+    "false_positive_rate": 1.0,
+    "false_positives_per_10000_normal": 10000.0,
+    "accuracy": 0.00489872177538791,
+    "f1": 0.009749682568474515,
+    "average_precision": 0.15368153745982757,
+    "roc_auc": 0.6795888371628155,
+    "logloss": 2.0431793961735067,
+    "brier_score": 0.5951278319776204,
+    "true_positive_gain": 21500,
+    "false_negative_cost": -4400,
+    "false_positive_cost": -436520
+  },
+  "unknown_categories": {
+    "category": 0,
+    "hour": 0,
+    "weekday": 0
+  }
+}

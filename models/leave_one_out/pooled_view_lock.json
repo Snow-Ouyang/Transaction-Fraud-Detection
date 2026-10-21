@@ -1,0 +1,36 @@
+{
+  "catboost": {
+    "pooled_leader": {
+      "run_id": "CB__combined",
+      "dropped": [],
+      "mean_score_per_10000": 2926.445154954774,
+      "pooled_score": 114840,
+      "features": 16,
+      "scores": [
+        42670,
+        45890,
+        26280
+      ]
+    },
+    "original_equal_window_leader": "CB__combined"
+  },
+  "xgboost": {
+    "pooled_leader": {
+      "run_id": "XGB__joint__mean_positive",
+      "dropped": [
+        "new_merchant",
+        "age",
+        "distinct_merchants_1h"
+      ],
+      "mean_score_per_10000": 2960.4923862520627,
+      "pooled_score": 115275,
+      "features": 15,
+      "scores": [
+        41590,
+        46690,
+        26995
+      ]
+    },
+    "original_equal_window_leader": "XGB__joint__mean_positive"
+  }
+}

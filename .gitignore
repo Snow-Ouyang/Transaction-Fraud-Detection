@@ -1,0 +1,42 @@
+# Local archives and scratch work
+/archive/
+/tmp/
+/outputs/
+.venv/
+**/.deps/
+**/__pycache__/
+*.py[cod]
+*.log
+
+# Historical human-review reports and graphics stay local
+report_zh.*
+*.html
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+**/figures/
+**/render_manifest.json
+**/figure_index.json
+**/qa/report_*.json
+
+# Rebuildable large model/cache/prediction artifacts
+*.pkl
+*.cbm
+*.ubj
+*.joblib
+**/predictions/
+**/artifacts/
+**/runs/*/*
+!**/runs/*/result.json
+!**/runs/*/June_result.json
+
+# Credentials and machine-local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db

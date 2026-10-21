@@ -1,0 +1,10 @@
+{
+  "locked_utc": "2026-10-21T21:19:16+00:00",
+  "manifest_sha256": "fb4cf6ccdff775dbae2f8f78d0512317bfd8fccc7beed8f9e01327644cf631ba",
+  "runs": {
+    "CB5_no_category": "89ff42987056c02e8c66966445202d1eceb66fc860602a2625f1d6d8072d06e1",
+    "X5_no_category": "2d9823924fb4f698d73445750ce76852eeca45c14e91c72c728a1f75a6a6ab46",
+    "X5_no_category_merchant": "430464d01a08611faec7a5d5b4a8eec54742ef760dab570ee5a6166a6ecaa1d0"
+  },
+  "role": "All predeclared fits locked; no selection and no June optimization."
+}

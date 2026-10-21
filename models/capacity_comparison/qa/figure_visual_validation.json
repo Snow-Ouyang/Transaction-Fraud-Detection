@@ -1,0 +1,16 @@
+{
+  "inspected_figures": [
+    "01_catboost_search.png",
+    "02_xgboost_search.png",
+    "03_fixed10_comparison.png",
+    "04_group_increments.png",
+    "05_parameter_group_interaction.png",
+    "06_june_utility.png",
+    "07_june_confusion.png",
+    "08_importance.png",
+    "09_compute_utility.png"
+  ],
+  "all_nine_inspected": true,
+  "method": "Visual inspection of three contact sheets; titles, Chinese labels, legends, axes and annotations checked",
+  "layout_issues_found": []
+}

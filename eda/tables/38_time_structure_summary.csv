@@ -1,0 +1,10 @@
+﻿metric,value
+total_category_month_cells_train,252.0
+normal_nonempty_category_month_cells,50.0
+fraud_nonempty_category_month_cells,252.0
+zero_normal_positive_fraud_cells,202.0
+fraud_rows_in_zero_normal_cells,8486.0
+fraud_share_in_zero_normal_cells,0.8010950627773058
+normal_category_month_cramers_v,0.7009407133102498
+fraud_category_month_cramers_v,0.024868545130187977
+test_category_month_cramers_v,0.8253867029263047

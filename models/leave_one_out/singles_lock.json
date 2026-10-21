@@ -1,0 +1,1524 @@
+{
+  "locked_utc": "2026-10-21T23:10:46+00:00",
+  "single_rows": [
+    {
+      "run_id": "CB__drop__amt",
+      "family": "catboost",
+      "dropped": [
+        "amt"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": 11.018416496143555,
+        "D2": -189.88558792423805,
+        "D3": -78.13635702863789
+      },
+      "mean_change_per_10000": -85.6678428189108,
+      "improved_windows": 1,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -2770
+    },
+    {
+      "run_id": "CB__drop__hour",
+      "family": "catboost",
+      "dropped": [
+        "hour"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -1623.979672145893,
+        "D2": -1614.828702368362,
+        "D3": -777.1236129282356
+      },
+      "mean_change_per_10000": -1338.6439958141634,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -62680
+    },
+    {
+      "run_id": "CB__drop__amount_to_past_mean",
+      "family": "catboost",
+      "dropped": [
+        "amount_to_past_mean"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -27.658474061748105,
+        "D2": -34.45181553055796,
+        "D3": 19.988370402674807
+      },
+      "mean_change_per_10000": -14.040639729877086,
+      "improved_windows": 1,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -880
+    },
+    {
+      "run_id": "CB__drop__has_customer_history",
+      "family": "catboost",
+      "dropped": [
+        "has_customer_history"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -145.03833959209373,
+        "D2": -59.68977341922251,
+        "D3": -43.61098996947231
+      },
+      "mean_change_per_10000": -82.7797009935962,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -4330
+    },
+    {
+      "run_id": "CB__drop__past_count",
+      "family": "catboost",
+      "dropped": [
+        "past_count"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -49.24557576847834,
+        "D2": -158.23798993686503,
+        "D3": -51.485196491738144
+      },
+      "mean_change_per_10000": -86.3229207323605,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -3495
+    },
+    {
+      "run_id": "CB__drop__past_mean_amt",
+      "family": "catboost",
+      "dropped": [
+        "past_mean_amt"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -65.66076769130444,
+        "D2": -147.4217222702945,
+        "D3": -4.84566555216359
+      },
+      "mean_change_per_10000": -72.6427185045875,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -3340
+    },
+    {
+      "run_id": "CB__drop__gap_seconds",
+      "family": "catboost",
+      "dropped": [
+        "gap_seconds"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -54.19261990960401,
+        "D2": -145.01810723327887,
+        "D3": 33.31395067112468
+      },
+      "mean_change_per_10000": -55.29892549058607,
+      "improved_windows": 1,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -2740
+    },
+    {
+      "run_id": "CB__drop__count_24h",
+      "family": "catboost",
+      "dropped": [
+        "count_24h"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -55.31694812349621,
+        "D2": -160.64160497388073,
+        "D3": 61.17652759606532
+      },
+      "mean_change_per_10000": -51.59400850043721,
+      "improved_windows": 1,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -2730
+    },
+    {
+      "run_id": "CB__drop__new_merchant",
+      "family": "catboost",
+      "dropped": [
+        "new_merchant"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -11.693013424478872,
+        "D2": -55.68374835752972,
+        "D3": -105.99893395357853
+      },
+      "mean_change_per_10000": -57.79189857852904,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -1830
+    },
+    {
+      "run_id": "CB__drop__count_1h",
+      "family": "catboost",
+      "dropped": [
+        "count_1h"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -20.01304220728115,
+        "D2": -109.36448418421305,
+        "D3": -36.34249164122692
+      },
+      "mean_change_per_10000": -55.240006010907045,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -2110
+    },
+    {
+      "run_id": "CB__drop__distinct_merchants_1h",
+      "family": "catboost",
+      "dropped": [
+        "distinct_merchants_1h"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": 6.071372355017877,
+        "D2": -105.75906162868955,
+        "D3": 23.016911372777052
+      },
+      "mean_change_per_10000": -25.556925966964872,
+      "improved_windows": 2,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -995
+    },
+    {
+      "run_id": "CB__drop__amount_to_mean_7d",
+      "family": "catboost",
+      "dropped": [
+        "amount_to_mean_7d"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": 3.372984641676598,
+        "D2": -44.06627567862064,
+        "D3": -79.95348161069923
+      },
+      "mean_change_per_10000": -40.21559088254776,
+      "improved_windows": 1,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -1135
+    },
+    {
+      "run_id": "CB__drop__mean_7d_to_past_mean",
+      "family": "catboost",
+      "dropped": [
+        "mean_7d_to_past_mean"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -125.47502867036945,
+        "D2": -395.39467358907797,
+        "D3": -155.06129766923488
+      },
+      "mean_change_per_10000": -225.31033330956075,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -9005
+    },
+    {
+      "run_id": "CB__drop__hour_unusualness",
+      "family": "catboost",
+      "dropped": [
+        "hour_unusualness"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -255.89710148186458,
+        "D2": -180.27112777617538,
+        "D3": -42.39957358143141
+      },
+      "mean_change_per_10000": -159.52260094649046,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -8290
+    },
+    {
+      "run_id": "CB__drop__category_past_share",
+      "family": "catboost",
+      "dropped": [
+        "category_past_share"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -81.40136268579523,
+        "D2": -177.46691023299041,
+        "D3": -77.53064883461744
+      },
+      "mean_change_per_10000": -112.13297391780104,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -4665
+    },
+    {
+      "run_id": "CB__drop__amount_to_shrunk_category_mean",
+      "family": "catboost",
+      "dropped": [
+        "amount_to_shrunk_category_mean"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -2.4735220705628387,
+        "D2": -64.89760599942313,
+        "D3": -138.70717643068275
+      },
+      "mean_change_per_10000": -68.69276816688956,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -2010
+    },
+    {
+      "run_id": "XGB__drop__amt",
+      "family": "xgboost",
+      "dropped": [
+        "amt"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -150.21024937599785,
+        "D2": -73.31025862897798,
+        "D3": -118.1130978339875
+      },
+      "mean_change_per_10000": -113.87786861298777,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -5230
+    },
+    {
+      "run_id": "XGB__drop__hour",
+      "family": "xgboost",
+      "dropped": [
+        "hour"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -483.2362663308673,
+        "D2": -825.6417652148831,
+        "D3": -602.6796530503465
+      },
+      "mean_change_per_10000": -637.1858948653656,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -26025
+    },
+    {
+      "run_id": "XGB__drop__amount_to_past_mean",
+      "family": "xgboost",
+      "dropped": [
+        "amount_to_past_mean"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": 44.07366598457422,
+        "D2": -4.406627567862064,
+        "D3": -62.993652178126666
+      },
+      "mean_change_per_10000": -7.775537920471504,
+      "improved_windows": 1,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": 405
+    },
+    {
+      "run_id": "XGB__drop__has_customer_history",
+      "family": "xgboost",
+      "dropped": [
+        "has_customer_history"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": 0.0,
+        "D2": 0.0,
+        "D3": 0.0
+      },
+      "mean_change_per_10000": 0.0,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": 0
+    },
+    {
+      "run_id": "XGB__drop__past_count",
+      "family": "xgboost",
+      "dropped": [
+        "past_count"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -881.9230509770412,
+        "D2": -156.63557991218792,
+        "D3": -133.25580268449872
+      },
+      "mean_change_per_10000": -390.6048111912426,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -22665
+    },
+    {
+      "run_id": "XGB__drop__past_mean_amt",
+      "family": "xgboost",
+      "dropped": [
+        "past_mean_amt"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -301.31996132310945,
+        "D2": -53.28013332051405,
+        "D3": -23.016911372777052
+      },
+      "mean_change_per_10000": -125.87233533880017,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -7555
+    },
+    {
+      "run_id": "XGB__drop__gap_seconds",
+      "family": "xgboost",
+      "dropped": [
+        "gap_seconds"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -319.7589440309415,
+        "D2": -96.54520398679614,
+        "D3": -144.15855017686678
+      },
+      "mean_change_per_10000": -186.82089939820148,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -9505
+    },
+    {
+      "run_id": "XGB__drop__count_24h",
+      "family": "xgboost",
+      "dropped": [
+        "count_24h"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -183.7152301499854,
+        "D2": -13.620485209755472,
+        "D3": -113.87314047584435
+      },
+      "mean_change_per_10000": -103.7362852785284,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -5195
+    },
+    {
+      "run_id": "XGB__drop__new_merchant",
+      "family": "xgboost",
+      "dropped": [
+        "new_merchant"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": 44.29853162735265,
+        "D2": 34.45181553055796,
+        "D3": -26.65116053689974
+      },
+      "mean_change_per_10000": 17.366395540336956,
+      "improved_windows": 2,
+      "mean_positive": true,
+      "robust_positive": true,
+      "pooled_score_change": 1195
+    },
+    {
+      "run_id": "XGB__drop__age",
+      "family": "xgboost",
+      "dropped": [
+        "age"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": 269.83877133412784,
+        "D2": 112.96990673973656,
+        "D3": -39.976740805349614
+      },
+      "mean_change_per_10000": 114.27731242283825,
+      "improved_windows": 2,
+      "mean_positive": true,
+      "robust_positive": true,
+      "pooled_score_change": 7080
+    },
+    {
+      "run_id": "XGB__drop__weekday",
+      "family": "xgboost",
+      "dropped": [
+        "weekday"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": 38.22715927233478,
+        "D2": 35.253020542896515,
+        "D3": -85.40485535688327
+      },
+      "mean_change_per_10000": -3.9748918472173265,
+      "improved_windows": 2,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": 585
+    },
+    {
+      "run_id": "XGB__drop__merchant",
+      "family": "xgboost",
+      "dropped": [
+        "merchant"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -124.12583481369882,
+        "D2": -132.5994295420312,
+        "D3": -82.98202258080147
+      },
+      "mean_change_per_10000": -113.23576231217716,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -5100
+    },
+    {
+      "run_id": "XGB__drop__count_1h",
+      "family": "xgboost",
+      "dropped": [
+        "count_1h"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -200.58015335836836,
+        "D2": 0.8012050123385571,
+        "D3": -60.57081940204487
+      },
+      "mean_change_per_10000": -86.78325591602488,
+      "improved_windows": 1,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -4950
+    },
+    {
+      "run_id": "XGB__drop__distinct_merchants_1h",
+      "family": "xgboost",
+      "dropped": [
+        "distinct_merchants_1h"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": 0.6745969283353197,
+        "D2": 68.90363106111592,
+        "D3": 0.6057081940204487
+      },
+      "mean_change_per_10000": 23.394645394490563,
+      "improved_windows": 3,
+      "mean_positive": true,
+      "robust_positive": true,
+      "pooled_score_change": 880
+    },
+    {
+      "run_id": "XGB__drop__amount_to_mean_7d",
+      "family": "xgboost",
+      "dropped": [
+        "amount_to_mean_7d"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -25.40981763396371,
+        "D2": 56.885555876037564,
+        "D3": -39.37103261132916
+      },
+      "mean_change_per_10000": -2.631764789751769,
+      "improved_windows": 1,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -180
+    },
+    {
+      "run_id": "XGB__drop__mean_7d_to_past_mean",
+      "family": "xgboost",
+      "dropped": [
+        "mean_7d_to_past_mean"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -428.5939151357064,
+        "D2": -62.493990962407466,
+        "D3": -69.05073411833115
+      },
+      "mean_change_per_10000": -186.71288007214835,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -10880
+    },
+    {
+      "run_id": "XGB__drop__category_past_share",
+      "family": "xgboost",
+      "dropped": [
+        "category_past_share"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -415.77657349733533,
+        "D2": 41.66266064160497,
+        "D3": -113.87314047584435
+      },
+      "mean_change_per_10000": -162.6623511105249,
+      "improved_windows": 1,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -9665
+    },
+    {
+      "run_id": "XGB__drop__amount_to_shrunk_category_mean",
+      "family": "xgboost",
+      "dropped": [
+        "amount_to_shrunk_category_mean"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share"
+      ],
+      "kind": "single",
+      "changes_per_10000": {
+        "D1": -18.88871399338895,
+        "D2": -104.15665160401244,
+        "D3": -38.15961622328827
+      },
+      "mean_change_per_10000": -53.734993940229884,
+      "improved_windows": 0,
+      "mean_positive": false,
+      "robust_positive": false,
+      "pooled_score_change": -2035
+    }
+  ],
+  "joint_sets": {
+    "catboost": {
+      "mean_positive": {
+        "dropped": [],
+        "run_id": "CB__combined",
+        "new_fit": false
+      },
+      "robust_positive": {
+        "dropped": [],
+        "run_id": "CB__combined",
+        "new_fit": false
+      }
+    },
+    "xgboost": {
+      "mean_positive": {
+        "dropped": [
+          "new_merchant",
+          "age",
+          "distinct_merchants_1h"
+        ],
+        "run_id": "XGB__joint__mean_positive",
+        "new_fit": true
+      },
+      "robust_positive": {
+        "dropped": [
+          "new_merchant",
+          "age",
+          "distinct_merchants_1h"
+        ],
+        "run_id": "XGB__joint__mean_positive",
+        "new_fit": true
+      }
+    }
+  },
+  "joint_jobs": [
+    {
+      "run_id": "XGB__joint__mean_positive",
+      "family": "xgboost",
+      "kind": "joint",
+      "dropped": [
+        "new_merchant",
+        "age",
+        "distinct_merchants_1h"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ]
+    }
+  ],
+  "manifest_sha256": "798737f457df2c80d1e3f032a00d29add9f5bf61ae7fdff71e5dd8ef381ef0d9"
+}

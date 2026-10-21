@@ -1,0 +1,41 @@
+{
+  "run_id": "CB0__merchant",
+  "family": "catboost",
+  "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+  "generated_utc": "2026-10-21T20:29:21+00:00",
+  "role": "reused_diagnostic_not_blind_test",
+  "selected": {
+    "n": 87778,
+    "fraud": 474,
+    "normal": 87304,
+    "threshold": 0.008766600119093006,
+    "TP": 429,
+    "FP": 87304,
+    "FN": 45,
+    "TN": 0,
+    "flags": 87733,
+    "utility": -419570,
+    "always_normal_utility": -47400,
+    "delta_vs_always_normal": -372170,
+    "utility_per_10000": -47798.99291394199,
+    "delta_per_10000": -42399.00658479345,
+    "precision": 0.004889836207584376,
+    "recall": 0.9050632911392406,
+    "false_positive_rate": 1.0,
+    "false_positives_per_10000_normal": 10000.0,
+    "accuracy": 0.004887329399166078,
+    "f1": 0.00972711916287823,
+    "average_precision": 0.08618804429213775,
+    "roc_auc": 0.5136623577500763,
+    "logloss": 4.6978346300526965,
+    "brier_score": 0.9479062574104618,
+    "true_positive_gain": 21450,
+    "false_negative_cost": -4500,
+    "false_positive_cost": -436520
+  },
+  "unknown_categories": {
+    "category": 0,
+    "hour": 0,
+    "merchant": 2618
+  }
+}

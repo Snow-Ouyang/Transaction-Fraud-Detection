@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-21",
+  "role": "Fresh six-fit reproduction through portable entry point; same recorded environment and original data, no historical model/cache reuse.",
+  "source_data_sha256_verified": true,
+  "full_rebuilt_feature_cache_exactly_matches": true,
+  "new_fits": 6,
+  "calibration_development_predictions_exactly_match": true,
+  "full_june_model_scores_match_atol": 1e-12,
+  "prediction_rows_compared": 1440010,
+  "history_audit": {
+    "checks": {
+      "label_free_function_input": true,
+      "direct_independent_spots": true,
+      "future_append_prefix_invariance": true,
+      "all_boundary_tests_passed": true,
+      "no_infinite_features": true,
+      "distinct_no_more_than_count": true,
+      "share_in_unit_interval": true
+    },
+    "independent_spots": 44,
+    "prefix_rows": 682991,
+    "prefix_checks": {
+      "count_1h": true,
+      "distinct_merchants_1h": true,
+      "amount_to_mean_7d": true,
+      "mean_7d_to_past_mean": true,
+      "hour_unusualness": true,
+      "category_past_share": true,
+      "amount_to_shrunk_category_mean": true
+    },
+    "boundary_checks": {
+      "exact_one_hour_inclusive": true,
+      "same_second_excluded": true,
+      "just_older_than_one_hour_excluded": true,
+      "seven_day_lower_boundary_inclusive": true,
+      "seven_day_oldest_excluded_after_one_second": true
+    },
+    "new_features": [
+      "count_1h",
+      "distinct_merchants_1h",
+      "amount_to_mean_7d",
+      "mean_7d_to_past_mean",
+      "hour_unusualness",
+      "category_past_share",
+      "amount_to_shrunk_category_mean"
+    ],
+    "category_shrinkage_alpha": 5.0
+  },
+  "models": {
+    "catboost": {
+      "mean_score_per_10000": 2926.445154954774,
+      "pooled_score": 114840,
+      "june_score": 19335,
+      "matches_recorded_development": true,
+      "matches_recorded_june": true
+    },
+    "xgboost": {
+      "mean_score_per_10000": 2960.4923862520627,
+      "pooled_score": 115275,
+      "june_score": 20075,
+      "matches_recorded_development": true,
+      "matches_recorded_june": true
+    }
+  },
+  "environment_note": "Reused existing pinned Python environment; no separate clean-environment pip install was performed. Models were newly fitted, not reused.",
+  "official_test_predictions": false
+}

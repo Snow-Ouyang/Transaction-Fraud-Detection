@@ -1,0 +1,9 @@
+# Validated experiment environment: Python 3.13.5
+numpy==2.1.3
+pandas==2.2.3
+scipy==1.15.3
+scikit-learn==1.6.1
+joblib==1.4.2
+catboost==1.2.8
+xgboost==3.2.0
+threadpoolctl==3.5.0

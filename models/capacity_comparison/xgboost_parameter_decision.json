@@ -1,0 +1,86 @@
+{
+  "family": "xgboost",
+  "search_winner": "X5",
+  "best_complex_candidate": null,
+  "ranked": [
+    {
+      "run_id": "X5",
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "mean_delta_per_10000": -17956.89798386605,
+      "worst_delta_per_10000": -30910.930718895463,
+      "windows_above_always_normal": 1
+    },
+    {
+      "run_id": "X3",
+      "config": {
+        "id": "X3",
+        "n_estimators": 1000,
+        "max_depth": 8,
+        "reg_lambda": 10,
+        "min_child_weight": 1
+      },
+      "mean_delta_per_10000": -18085.206207905572,
+      "worst_delta_per_10000": -30646.03899170246,
+      "windows_above_always_normal": 0
+    },
+    {
+      "run_id": "X2",
+      "config": {
+        "id": "X2",
+        "n_estimators": 500,
+        "max_depth": 8,
+        "reg_lambda": 10,
+        "min_child_weight": 1
+      },
+      "mean_delta_per_10000": -18180.58578467691,
+      "worst_delta_per_10000": -30644.46493220301,
+      "windows_above_always_normal": 0
+    },
+    {
+      "run_id": "X0",
+      "config": {
+        "id": "X0",
+        "n_estimators": 500,
+        "max_depth": 6,
+        "reg_lambda": 10,
+        "min_child_weight": 1
+      },
+      "mean_delta_per_10000": -18323.813794548274,
+      "worst_delta_per_10000": -30701.131074183173,
+      "windows_above_always_normal": 0
+    },
+    {
+      "run_id": "X4",
+      "config": {
+        "id": "X4",
+        "n_estimators": 1000,
+        "max_depth": 8,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "mean_delta_per_10000": -18465.207664280282,
+      "worst_delta_per_10000": -30915.877763036588,
+      "windows_above_always_normal": 0
+    },
+    {
+      "run_id": "X1",
+      "config": {
+        "id": "X1",
+        "n_estimators": 1000,
+        "max_depth": 6,
+        "reg_lambda": 10,
+        "min_child_weight": 1
+      },
+      "mean_delta_per_10000": -18470.856729751136,
+      "worst_delta_per_10000": -30556.992197162195,
+      "windows_above_always_normal": 0
+    }
+  ],
+  "locked_utc": "2026-10-21T19:34:17+00:00"
+}

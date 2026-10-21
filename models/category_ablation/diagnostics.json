@@ -1,0 +1,16 @@
+{
+  "generated_from_saved_predictions": true,
+  "no_future_threshold_optimization": true,
+  "tables": {
+    "metrics": 35,
+    "category_support_errors": 490,
+    "score_distributions": 70,
+    "normal_support_groups": 70,
+    "paired_changes": 21,
+    "error_feature_profiles": 70,
+    "support_coverage": 35,
+    "comparisons": 12
+  },
+  "figures": 4,
+  "completion_sha256": "0406705572c037fa922973b9a92e6f9ffcaf1a1526f3bde94d18376113557812"
+}

@@ -1,0 +1,82 @@
+{
+  "steps": [
+    {
+      "step": "E1_amount_relative",
+      "group_name": "个人金额偏离",
+      "parent_run": "core_d6_l10",
+      "added_features": "amount_to_past_mean, has_customer_history",
+      "candidate_feature_count": 5,
+      "mean_paired_delta_per_10000": 166.14866822577702,
+      "improved_windows": 2,
+      "D1_change_per_10000": 306.7167367497823,
+      "D2_change_per_10000": 388.58443098419957,
+      "D3_change_per_10000": -196.85516305665078,
+      "retained": true,
+      "retained_run_after_step": "E1_amount_relative"
+    },
+    {
+      "step": "E2_age_weekday",
+      "group_name": "年龄与星期",
+      "parent_run": "E1_amount_relative",
+      "added_features": "age, weekday",
+      "candidate_feature_count": 7,
+      "mean_paired_delta_per_10000": -547.1540848076153,
+      "improved_windows": 2,
+      "D1_change_per_10000": 891.8171392592994,
+      "D2_change_per_10000": -2650.7867833221153,
+      "D3_change_per_10000": 117.50738963996992,
+      "retained": false,
+      "retained_run_after_step": "E1_amount_relative"
+    },
+    {
+      "step": "E3_behavior_history",
+      "group_name": "其他无标签交易历史",
+      "parent_run": "E1_amount_relative",
+      "added_features": "past_count, past_mean_amt, gap_seconds, count_24h, new_merchant",
+      "candidate_feature_count": 10,
+      "mean_paired_delta_per_10000": 515.325083632862,
+      "improved_windows": 3,
+      "D1_change_per_10000": 925.3221200332846,
+      "D2_change_per_10000": 201.5030606031487,
+      "D3_change_per_10000": 419.15007026215244,
+      "retained": true,
+      "retained_run_after_step": "E3_behavior_history"
+    },
+    {
+      "step": "E4_merchant",
+      "group_name": "商户名称",
+      "parent_run": "E3_behavior_history",
+      "added_features": "merchant",
+      "candidate_feature_count": 11,
+      "mean_paired_delta_per_10000": -2.71049740257331,
+      "improved_windows": 1,
+      "D1_change_per_10000": -149.0859211621064,
+      "D2_change_per_10000": 148.22292728263164,
+      "D3_change_per_10000": -7.268498328245187,
+      "retained": false,
+      "retained_run_after_step": "E3_behavior_history"
+    },
+    {
+      "step": "E5_identity_proxies",
+      "group_name": "职业、城市、邮编",
+      "parent_run": "E3_behavior_history",
+      "added_features": "job, city, zip",
+      "candidate_feature_count": 13,
+      "mean_paired_delta_per_10000": -620.4744510221602,
+      "improved_windows": 0,
+      "D1_change_per_10000": -388.1180994355818,
+      "D2_change_per_10000": -1083.2291766817307,
+      "D3_change_per_10000": -390.07607694916805,
+      "retained": false,
+      "retained_run_after_step": "E3_behavior_history"
+    }
+  ],
+  "current_retained_run": "E3_behavior_history",
+  "signature": {
+    "protocol_sha256": "860c0b57580545cec2f12fdb5b02d733589ba750dadbf6f007c733c8a58c0c98",
+    "source_sha256": "28d40f15f0a8db05595e8d9c17d386cdd82d9c26805687894e3cf2820d0368fd",
+    "feature_code_sha256": "79e1bdd9c0e42187b0171f2b6f46bf0332a9e85b8056e25cadc99bc40c5d84a9",
+    "runner_sha256": "4b35a8a0afe5b283921bd3a3ca53f616b734e8335849b1550ea436da2d9eef59"
+  },
+  "no_june_predictions_generated": true
+}

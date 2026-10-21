@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "all_rows_preserved": true,
+    "customer_key_unique_matches_static_combinations": true,
+    "strict_past_counts_nonnegative": true,
+    "count24_no_more_than_past_count": true,
+    "previous_distinct_time_strictly_earlier": true,
+    "first_event_mean_missing": true,
+    "independent_direct_spots": true,
+    "future_append_does_not_change_prefix_features": true,
+    "history_input_has_no_labels": true
+  },
+  "prefix_invariance": {
+    "past_count": true,
+    "past_mean_amt": true,
+    "gap_seconds": true,
+    "count_24h": true,
+    "new_merchant": true,
+    "amount_to_past_mean": true,
+    "has_customer_history": true
+  },
+  "spot_rows": 36,
+  "first_history_missing_rows": 1099,
+  "normal_relative_amount_median": 0.5652952294908524,
+  "fraud_relative_amount_median": 4.865868179742705,
+  "future_append_prefix_n": 682991
+}

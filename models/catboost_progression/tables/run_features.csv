@@ -1,0 +1,10 @@
+﻿run_id,feature_count,features,depth,l2_leaf_reg,mean_development_delta_per_10000
+core_default,3,"amt, category, hour",6,3.0,-19512.49898506918
+core_d4_l3,3,"amt, category, hour",4,3.0,-19666.409919123584
+core_d4_l10,3,"amt, category, hour",4,10.0,-19577.2282288179
+core_d6_l10,3,"amt, category, hour",6,10.0,-19253.073054554367
+E1_amount_relative,5,"amt, category, hour, amount_to_past_mean, has_customer_history",6,10.0,-19086.924386328585
+E2_age_weekday,7,"amt, category, hour, amount_to_past_mean, has_customer_history, age, weekday",6,10.0,-19634.078471136203
+E3_behavior_history,10,"amt, category, hour, amount_to_past_mean, has_customer_history, past_count, past_mean_amt, gap_seconds, count_24h, new_merchant",6,10.0,-18571.599302695726
+E4_merchant,11,"amt, category, hour, amount_to_past_mean, has_customer_history, past_count, past_mean_amt, gap_seconds, count_24h, new_merchant, merchant",6,10.0,-18574.309800098297
+E5_identity_proxies,13,"amt, category, hour, amount_to_past_mean, has_customer_history, past_count, past_mean_amt, gap_seconds, count_24h, new_merchant, job, city, zip",6,10.0,-19192.073753717887

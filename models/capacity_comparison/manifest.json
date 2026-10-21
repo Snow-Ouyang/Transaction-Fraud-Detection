@@ -1,0 +1,27 @@
+{
+  "source_hashes": {
+    "fraudTrain.csv": "28d40f15f0a8db05595e8d9c17d386cdd82d9c26805687894e3cf2820d0368fd",
+    "fraudTest.csv": "ca9c0384dcc559c78210749345779dc744c9ab36e648feea660aef431a6a1cce",
+    "ISYE 7406 Project Description.pdf": "dd91700489d33a41c7bf567c9f5ad18f4988b957769d3f64fed273cb387c8a26",
+    "models/catboost_progression/results.json": "73df32204774f1d350fa1c96f585f0278c3d2ac25f3353880c98fe0633747cf9",
+    "models/catboost_progression/selection_lock.json": "7a60042ebca44d4a47372cf06574e31ca85598f426f9a31dc528ef700b00671e",
+    "models/catboost_progression/feature_cache.pkl": "74e9ed06a8e2e00b7d6781dc12a5e380be65e19ae7d53a5eb4b648df28210a2f",
+    "models/catboost_progression/features.py": "79e1bdd9c0e42187b0171f2b6f46bf0332a9e85b8056e25cadc99bc40c5d84a9",
+    "models/catboost_progression/qa/feature_validation.json": "7bf088b2ff25b1388414f0f82fbaa4cac7c89db03bec0e3e184d79727ed451e2",
+    "models/core_baseline/run_core.py": "91f1bd43c2daf7fdd74828dbff8c5f859f1bcdda1a846aad4712947cd727e5a6"
+  },
+  "code_hashes": {
+    "protocol.json": "4803d316a0318be8c2c89e03a17f85153152bc35024185a4c58ec0cbb908614b",
+    "run_comparison.py": "0f58dffd9eaed02a59ae933607b8616d59c796b6e53f457ea13d0547121c9639",
+    "model_io.py": "252d97e8539384e8151ab30dedc7a11944f2326a9349bb2fe5d11402525440d3"
+  },
+  "runtime": {
+    "python": "3.13.5",
+    "catboost": "1.2.8",
+    "xgboost": "3.2.0",
+    "pandas": "2.2.3",
+    "numpy": "2.1.3",
+    "executable": "C:\\ProgramData\\anaconda3\\python.exe"
+  },
+  "started_utc": "2026-10-21T19:23:19+00:00"
+}

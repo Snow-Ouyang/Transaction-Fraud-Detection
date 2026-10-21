@@ -1,0 +1,5 @@
+# Preserve exact scientific-source bytes for frozen experiment manifests.
+* -text
+*.md text eol=lf
+/fraudTrain.csv filter=lfs diff=lfs merge=lfs -text
+/fraudTest.csv filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,333 @@
+{
+  "locked_utc": "2026-10-21T22:04:33+00:00",
+  "selections": {
+    "catboost": {
+      "baseline": "CB5_no_category",
+      "groups": [
+        {
+          "run_id": "CB__velocity",
+          "group": {
+            "id": "velocity",
+            "name": "一小时交易密度与商户分散",
+            "add": [
+              "count_1h",
+              "distinct_merchants_1h"
+            ]
+          },
+          "changes_per_10000": {
+            "D1": 87.47273504081318,
+            "D2": 124.58737941864592,
+            "D3": 165.96404516160283
+          },
+          "mean_paired_change_per_10000": 126.00805320702064,
+          "improved_windows": 3,
+          "accepted": true
+        },
+        {
+          "run_id": "CB__recent_amount",
+          "group": {
+            "id": "recent_amount",
+            "name": "七日消费水平与长期偏离",
+            "add": [
+              "amount_to_mean_7d",
+              "mean_7d_to_past_mean"
+            ]
+          },
+          "changes_per_10000": {
+            "D1": 346.29308987879745,
+            "D2": 838.8616479184698,
+            "D3": 915.8307893589185
+          },
+          "mean_paired_change_per_10000": 700.3285090520618,
+          "improved_windows": 3,
+          "accepted": true
+        },
+        {
+          "run_id": "CB__hour_habit",
+          "group": {
+            "id": "hour_habit",
+            "name": "个人交易时段习惯",
+            "add": [
+              "hour_unusualness"
+            ]
+          },
+          "changes_per_10000": {
+            "D1": 3.5978502844552622,
+            "D2": 100.95183155465838,
+            "D3": 247.73465135436345
+          },
+          "mean_paired_change_per_10000": 117.42811106449237,
+          "improved_windows": 3,
+          "accepted": true
+        },
+        {
+          "run_id": "CB__category_context",
+          "group": {
+            "id": "category_context",
+            "name": "类别与个人历史交叉",
+            "add": [
+              "category_past_share",
+              "amount_to_shrunk_category_mean"
+            ]
+          },
+          "changes_per_10000": {
+            "D1": 77.12891547300478,
+            "D2": 57.286158382207304,
+            "D3": -90.85622910306756
+          },
+          "mean_paired_change_per_10000": 14.519614917381508,
+          "improved_windows": 2,
+          "accepted": true
+        },
+        {
+          "run_id": "CB__age_weekday",
+          "group": {
+            "id": "age_weekday",
+            "name": "重新检验：年龄与星期",
+            "add": [
+              "age",
+              "weekday"
+            ]
+          },
+          "changes_per_10000": {
+            "D1": -10144.813473949316,
+            "D2": -153.03015735666395,
+            "D3": 150.21563211707144
+          },
+          "mean_paired_change_per_10000": -3382.5426663963026,
+          "improved_windows": 1,
+          "accepted": false
+        },
+        {
+          "run_id": "CB__merchant",
+          "group": {
+            "id": "merchant",
+            "name": "重新检验：商户名称",
+            "add": [
+              "merchant"
+            ]
+          },
+          "changes_per_10000": {
+            "D1": -33438.870275010675,
+            "D2": -9977.806621158223,
+            "D3": -32662.208654358677
+          },
+          "mean_paired_change_per_10000": -25359.628516842524,
+          "improved_windows": 0,
+          "accepted": false
+        },
+        {
+          "run_id": "CB__identity",
+          "group": {
+            "id": "identity",
+            "name": "重新检验：职业/城市/邮编",
+            "add": [
+              "job",
+              "city",
+              "zip"
+            ]
+          },
+          "changes_per_10000": {
+            "D1": -5817.049313035461,
+            "D2": -145.8193122456173,
+            "D3": 198.0665794446868
+          },
+          "mean_paired_change_per_10000": -1921.600681945464,
+          "improved_windows": 1,
+          "accepted": false
+        }
+      ],
+      "accepted_groups": [
+        "velocity",
+        "recent_amount",
+        "hour_habit",
+        "category_context"
+      ],
+      "combined": {
+        "changes_per_10000": {
+          "D1": 691.2369859009243,
+          "D2": 1049.1779636573406,
+          "D3": 1079.3720017444393
+        },
+        "mean_paired_change_per_10000": 939.9289837675682,
+        "improved_windows": 3,
+        "accepted": true
+      },
+      "final_run": "CB__combined",
+      "final_features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "eligible_runs": [
+        "CB5_no_category",
+        "CB__velocity",
+        "CB__recent_amount",
+        "CB__hour_habit",
+        "CB__category_context",
+        "CB__combined"
+      ],
+      "mean_delta_per_10000": 10253.170283829413
+    },
+    "xgboost": {
+      "baseline": "X5_no_category",
+      "groups": [
+        {
+          "run_id": "XGB__velocity",
+          "group": {
+            "id": "velocity",
+            "name": "一小时交易密度与商户分散",
+            "add": [
+              "count_1h",
+              "distinct_merchants_1h"
+            ]
+          },
+          "changes_per_10000": {
+            "D1": 304.6929459647861,
+            "D2": 205.10848315867088,
+            "D3": 361.00208363618776
+          },
+          "mean_paired_change_per_10000": 290.26783758654824,
+          "improved_windows": 3,
+          "accepted": true
+        },
+        {
+          "run_id": "XGB__recent_amount",
+          "group": {
+            "id": "recent_amount",
+            "name": "七日消费水平与长期偏离",
+            "add": [
+              "amount_to_mean_7d",
+              "mean_7d_to_past_mean"
+            ]
+          },
+          "changes_per_10000": {
+            "D1": 1752.6028198151605,
+            "D2": 896.5484088068456,
+            "D3": 804.9861898531767
+          },
+          "mean_paired_change_per_10000": 1151.3791394917275,
+          "improved_windows": 3,
+          "accepted": true
+        },
+        {
+          "run_id": "XGB__hour_habit",
+          "group": {
+            "id": "hour_habit",
+            "name": "个人交易时段习惯",
+            "add": [
+              "hour_unusualness"
+            ]
+          },
+          "changes_per_10000": {
+            "D1": -674.821793978098,
+            "D2": 119.78014934461453,
+            "D3": 246.52323496632334
+          },
+          "mean_paired_change_per_10000": -102.83946988905336,
+          "improved_windows": 2,
+          "accepted": false
+        },
+        {
+          "run_id": "XGB__category_context",
+          "group": {
+            "id": "category_context",
+            "name": "类别与个人历史交叉",
+            "add": [
+              "category_past_share",
+              "amount_to_shrunk_category_mean"
+            ]
+          },
+          "changes_per_10000": {
+            "D1": 156.95621865935107,
+            "D2": 84.92773130788737,
+            "D3": -36.34249164122639
+          },
+          "mean_paired_change_per_10000": 68.51381944200402,
+          "improved_windows": 2,
+          "accepted": true
+        },
+        {
+          "run_id": "XGB__identity",
+          "group": {
+            "id": "identity",
+            "name": "重新检验：职业/城市/邮编",
+            "add": [
+              "job",
+              "city",
+              "zip"
+            ]
+          },
+          "changes_per_10000": {
+            "D1": 86.79813811247789,
+            "D2": -259.99102650386203,
+            "D3": -167.1754615496434
+          },
+          "mean_paired_change_per_10000": -113.45611664700918,
+          "improved_windows": 1,
+          "accepted": false
+        }
+      ],
+      "accepted_groups": [
+        "velocity",
+        "recent_amount",
+        "category_context"
+      ],
+      "combined": {
+        "changes_per_10000": {
+          "D1": 2400.8904679454026,
+          "D2": 848.0755055603627,
+          "D3": 910.3794156127346
+        },
+        "mean_paired_change_per_10000": 1386.4484630395,
+        "improved_windows": 3,
+        "accepted": true
+      },
+      "final_run": "XGB__combined",
+      "final_features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "eligible_runs": [
+        "X5_no_category",
+        "XGB__velocity",
+        "XGB__recent_amount",
+        "XGB__category_context",
+        "XGB__combined"
+      ],
+      "mean_delta_per_10000": 10165.938202975587
+    }
+  },
+  "group_lock_sha256": "63ddf07d6433969a47930cb6fe60854369a5bf2b7740c3497b35a338944058bc",
+  "manifest_sha256": "6abcbe38f03937608327aa4656d6cd3b23d94be0de24375269de42fef87220e6",
+  "june_not_used_for_selection": true
+}

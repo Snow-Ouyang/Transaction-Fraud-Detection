@@ -1,0 +1,17 @@
+﻿run_id,family,name,features,mean_score_per_10000,pooled_score,pooled_n,selected,equal_window_score_rank,pooled_total_score_rank
+CB__combined,catboost,通过组的合并检验,16,2926.445154954774,114840,429715,True,1,1
+CB__recent_amount,catboost,七日消费水平与长期偏离,11,2686.844680239268,103195,429715,False,2,2
+CB__velocity,catboost,一小时交易密度与商户分散,11,2112.5242243942266,82335,429715,False,3,3
+CB__hour_habit,catboost,个人交易时段习惯,10,2103.9442822516985,80850,429715,False,4,4
+CB__category_context,catboost,类别与个人历史交叉,11,2001.0357861045877,79145,429715,False,5,5
+CB5_no_category,catboost,无类别基线,9,1986.516171187206,77465,429715,False,6,6
+CB__identity,catboost,重新检验：职业/城市/邮编,12,64.9154892417423,-52065,429715,False,7,7
+CB__age_weekday,catboost,重新检验：年龄与星期,11,-1396.0264952090965,-148780,429715,False,8,8
+CB__merchant,catboost,重新检验：商户名称,10,-23373.112345655318,-1060220,429715,False,9,9
+XGB__combined,xgboost,通过组的合并检验,18,2839.2130741009496,107455,429715,True,1,1
+XGB__recent_amount,xgboost,七日消费水平与长期偏离,14,2604.1437505531767,92775,429715,False,2,2
+XGB__velocity,xgboost,一小时交易密度与商户分散,14,1743.0324486479974,48285,429715,False,3,3
+XGB__category_context,xgboost,类别与个人历史交叉,14,1521.2784305034531,40220,429715,False,4,4
+X5_no_category,xgboost,无类别基线,12,1452.7646110614494,35970,429715,False,5,5
+XGB__hour_habit,xgboost,个人交易时段习惯,13,1349.925141172396,24495,429715,False,6,7
+XGB__identity,xgboost,重新检验：职业/城市/邮编,15,1339.30849441444,33275,429715,False,7,6

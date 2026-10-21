@@ -1,0 +1,43 @@
+{
+  "experiment": "core_features_v1",
+  "status": "frozen_before_first_fit",
+  "features": ["amt", "category", "hour"],
+  "hour_source": "unix_time; recorded clock, no inferred local timezone",
+  "metadata_only": ["ID", "unix_time", "is_fraud"],
+  "excluded": "all customer identity, demographics, location, merchant identity, history, absolute date, XGBoost",
+  "seed": 7406,
+  "utility": {"TP": 50, "FN": -100, "FP": -5, "TN": 0},
+  "class_weight": null,
+  "sampling": "all rows, natural prevalence",
+  "probability_calibration": "none; theoretical threshold is a reference, not a calibration claim",
+  "logistic": {
+    "amount": "log1p -> cubic spline, 8 uniformly spaced knots fitted only on training -> StandardScaler",
+    "categoricals": "category and hour -> OneHotEncoder(handle_unknown=ignore)",
+    "penalty": "l2", "C": 1.0, "solver": "lbfgs", "max_iter": 1200, "tol": 0.000001,
+    "manual_interactions": false
+  },
+  "catboost": {
+    "iterations": 500, "depth": 6, "learning_rate": 0.05, "l2_leaf_reg": 3,
+    "loss_function": "Logloss", "boosting_type": "Plain", "has_time": true,
+    "counter_calc_method": "SkipTest", "thread_count": 4, "task_type": "CPU",
+    "early_stopping": false, "categorical_features": ["category", "hour"]
+  },
+  "folds": [
+    {"name": "D1", "fit_end_exclusive": "2024-10-01", "threshold_end_exclusive": "2024-11-01", "evaluations": [
+      {"name": "D1_NovDec", "start": "2024-11-01", "end_exclusive": "2025-01-01", "role": "development_backtest"}
+    ]},
+    {"name": "D2", "fit_end_exclusive": "2025-01-01", "threshold_end_exclusive": "2025-02-01", "evaluations": [
+      {"name": "D2_FebMar", "start": "2025-02-01", "end_exclusive": "2025-04-01", "role": "development_backtest"}
+    ]},
+    {"name": "D3", "fit_end_exclusive": "2025-04-01", "threshold_end_exclusive": "2025-05-01", "evaluations": [
+      {"name": "D3_May", "start": "2025-05-01", "end_exclusive": "2025-06-01", "role": "development_backtest"},
+      {"name": "D3_June", "start": "2025-06-01", "end_exclusive": "2025-07-01", "role": "reserved_acceptance_already_described_in_EDA"}
+    ]}
+  ],
+  "threshold_selection": "exact maximum utility on threshold window only, include all-pass and all-flag, group tied scores; equal utility chooses fewer flags",
+  "reference_policies": ["always_normal", "score_ge_0.5", "score_ge_5_over_155"],
+  "slices": ["month", "week", "category", "hour", "amount_band", "zero_normal_category_support_in_fit"],
+  "selection_rules": "fixed hyperparameters; no post-evaluation refit, model variant search, threshold changes or feature additions in v1",
+  "official_test": "no prediction or submission in this experiment",
+  "limitation": "all training months were descriptively inspected in EDA; June is reserved from fitting/selection, not an unseen blind dataset"
+}

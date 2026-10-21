@@ -1,0 +1,4 @@
+﻿group,group_name,old_increment,complex_increment,increment_difference,old_accepted,complex_accepted
+age_weekday,年龄与星期,-98.00102050707392,-83.71010051544424,14.290919991629679,False,False
+merchant,商户名称,-2.71049740257331,-138.88558026829074,-136.17508286571743,False,False
+identity,职业、城市、邮编,-620.4744510221602,-718.4147183011883,-97.94026727902803,False,False

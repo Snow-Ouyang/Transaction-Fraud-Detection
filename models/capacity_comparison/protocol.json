@@ -1,0 +1,48 @@
+{
+  "experiment": "v3_fixed10_capacity_catboost_xgboost",
+  "seed": 7406,
+  "base_features": ["amt", "category", "hour", "amount_to_past_mean", "has_customer_history", "past_count", "past_mean_amt", "gap_seconds", "count_24h", "new_merchant"],
+  "categorical_features": ["category", "hour", "weekday", "merchant", "job", "city", "zip"],
+  "catboost_fixed": {"learning_rate": 0.05, "loss_function": "Logloss", "boosting_type": "Plain", "has_time": true, "counter_calc_method": "SkipTest", "task_type": "CPU", "thread_count": 4, "allow_writing_files": false},
+  "catboost_grid": [
+    {"id": "CB0", "iterations": 500, "depth": 6, "l2_leaf_reg": 10},
+    {"id": "CB1", "iterations": 1000, "depth": 6, "l2_leaf_reg": 10},
+    {"id": "CB2", "iterations": 500, "depth": 8, "l2_leaf_reg": 10},
+    {"id": "CB3", "iterations": 1000, "depth": 8, "l2_leaf_reg": 10},
+    {"id": "CB4", "iterations": 1000, "depth": 8, "l2_leaf_reg": 30},
+    {"id": "CB5", "iterations": 500, "depth": 10, "l2_leaf_reg": 30}
+  ],
+  "xgboost_fixed": {"learning_rate": 0.05, "objective": "binary:logistic", "eval_metric": "logloss", "tree_method": "hist", "device": "cpu", "n_jobs": 4, "enable_categorical": true, "max_cat_to_onehot": 4, "max_cat_threshold": 64, "max_bin": 256, "subsample": 1.0, "colsample_bytree": 1.0, "reg_alpha": 0.0, "gamma": 0.0, "scale_pos_weight": 1.0, "verbosity": 1},
+  "xgboost_grid": [
+    {"id": "X0", "n_estimators": 500, "max_depth": 6, "reg_lambda": 10, "min_child_weight": 1},
+    {"id": "X1", "n_estimators": 1000, "max_depth": 6, "reg_lambda": 10, "min_child_weight": 1},
+    {"id": "X2", "n_estimators": 500, "max_depth": 8, "reg_lambda": 10, "min_child_weight": 1},
+    {"id": "X3", "n_estimators": 1000, "max_depth": 8, "reg_lambda": 10, "min_child_weight": 1},
+    {"id": "X4", "n_estimators": 1000, "max_depth": 8, "reg_lambda": 30, "min_child_weight": 5},
+    {"id": "X5", "n_estimators": 500, "max_depth": 10, "reg_lambda": 30, "min_child_weight": 5}
+  ],
+  "folds": [
+    {"name": "D1", "fit_end": "2024-10-01", "threshold_end": "2024-11-01", "dev_start": "2024-11-01", "dev_end": "2025-01-01"},
+    {"name": "D2", "fit_end": "2025-01-01", "threshold_end": "2025-02-01", "dev_start": "2025-02-01", "dev_end": "2025-04-01"},
+    {"name": "D3", "fit_end": "2025-04-01", "threshold_end": "2025-05-01", "dev_start": "2025-05-01", "dev_end": "2025-06-01"}
+  ],
+  "groups": [
+    {"id": "age_weekday", "name": "年龄与星期", "add": ["age", "weekday"]},
+    {"id": "merchant", "name": "商户名称", "add": ["merchant"]},
+    {"id": "identity", "name": "职业、城市、邮编", "add": ["job", "city", "zip"]}
+  ],
+  "search_rule": "Rank equal-window mean utility delta per 10000 versus always normal, then worst-window delta, then fewer depth, trees, then stronger L2. No early stopping or extra search.",
+  "catboost_branches": "Retest all groups on CB0 and on the best complex candidate among CB1..CB5. Preserve overall search winner separately; testing a complex branch is not a claim that it wins.",
+  "xgboost_branches": "Retest all groups on the best of X0..X5.",
+  "group_rule": "Each group independently added to its own fixed-10 branch. Accept if mean paired utility per10000 >0 and at least2/3 dev windows improve. Rejected groups not automatically combined.",
+  "combined_rule": "If at least two groups accepted on a branch, fit their union once; accept by same rule versus branch fixed10. Final branch model is highest-ranked eligible base/single/combined; accepted groups need not all appear in final winner.",
+  "family_final": "Best ranked eligible final across family branches, tie by fewer inputs. CatBoost old controls remain eligible.",
+  "xgboost_encoding": "Native categorical hist; per-fold vocabularies fitted only on fitting period, saved as JSON; future unseen levels mapped to missing, known string levels stable; no target encoding outside learner. Numeric NaN preserved.",
+  "utility": {"TP": 50, "FN": -100, "FP": -5, "TN": 0},
+  "threshold": "Per run and fold, select exact tie-aware utility maximum only on preceding threshold window; equal optimum favors fewer flags; no June tuning.",
+  "weights_and_sampling": "Natural prevalence, all fitting rows; no class weights or oversampling. XGBoost subsample and colsample both1.",
+  "history": "Reuse immutable v2 audited strictly-past label-free cache; no new historical label features, no absolute date/identity key inputs.",
+  "june": "Previously observed and evaluated; generate this version June predictions only after both family selections locked. Reused diagnostic only, no reselection.",
+  "official_test": "Never load as feature table; no predictions, no submission.",
+  "limits": "Same development windows reused for search, optimistic selection results; no new independent test. Same depth/tree budget does not imply equal algorithm capacity. Added inputs do not logically require higher complexity. Capacity interaction assessed against CB0 group controls. No further candidates after results."
+}

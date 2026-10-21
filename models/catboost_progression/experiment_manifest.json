@@ -1,0 +1,28 @@
+{
+  "signature": {
+    "protocol_sha256": "860c0b57580545cec2f12fdb5b02d733589ba750dadbf6f007c733c8a58c0c98",
+    "source_sha256": "28d40f15f0a8db05595e8d9c17d386cdd82d9c26805687894e3cf2820d0368fd",
+    "feature_code_sha256": "79e1bdd9c0e42187b0171f2b6f46bf0332a9e85b8056e25cadc99bc40c5d84a9",
+    "runner_sha256": "4b35a8a0afe5b283921bd3a3ca53f616b734e8335849b1550ea436da2d9eef59"
+  },
+  "source_hashes": {
+    "fraudTrain.csv": "28d40f15f0a8db05595e8d9c17d386cdd82d9c26805687894e3cf2820d0368fd",
+    "fraudTest.csv": "ca9c0384dcc559c78210749345779dc744c9ab36e648feea660aef431a6a1cce",
+    "ISYE 7406 Project Description.pdf": "dd91700489d33a41c7bf567c9f5ad18f4988b957769d3f64fed273cb387c8a26",
+    "eda/report_zh.md": "7ff48736e771ddd606b38ea2eaf6fadaecfae76743b47a8cfa96977abab4e7a8",
+    "eda/report_zh.html": "7bbb493189b98fa5bb8342bcd10bfd9836949a02f1eaff3ded368e1642a4d885",
+    "models/core_baseline/results.json": "982a143300db0e4d33faef468051aa63bff6a768542db56ddefc056855bab915",
+    "models/core_baseline/protocol.json": "270ca8d738f97e796a12a6d269409269f35ff94e9bd11b5c690977ede492af9c",
+    "models/core_baseline/tables/metrics.csv": "6dcba9c3276a06689c1270c0b64c3fdc69fda5ec0823356fca08baa27e9b6826",
+    "models/core_baseline/report_zh.md": "07b2be906e8c36442b53206f4ac4c0929eb72f53a78c8071eed431597cebcae0",
+    "models/core_baseline/report_zh.html": "1493e67da795864be4a78c485267d02b070bf40aad718fd09941c09217081e2d"
+  },
+  "started_utc": "2026-10-21T18:36:04.636499+00:00",
+  "runtime": {
+    "python": "3.13.5",
+    "executable": "C:\\ProgramData\\anaconda3\\python.exe",
+    "pandas": "2.2.3",
+    "numpy": "2.1.3",
+    "catboost": "1.2.8"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "run_id": "CB0__identity",
+  "family": "catboost",
+  "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+  "generated_utc": "2026-10-21T20:29:22+00:00",
+  "role": "reused_diagnostic_not_blind_test",
+  "selected": {
+    "n": 87778,
+    "fraud": 474,
+    "normal": 87304,
+    "threshold": 0.085172284205741,
+    "TP": 403,
+    "FP": 87304,
+    "FN": 71,
+    "TN": 0,
+    "flags": 87707,
+    "utility": -423470,
+    "always_normal_utility": -47400,
+    "delta_vs_always_normal": -376070,
+    "utility_per_10000": -48243.29558659345,
+    "delta_per_10000": -42843.30925744492,
+    "precision": 0.004594844197156441,
+    "recall": 0.8502109704641351,
+    "false_positive_rate": 1.0,
+    "false_positives_per_10000_normal": 10000.0,
+    "accuracy": 0.004591127617398437,
+    "f1": 0.009140290992390651,
+    "average_precision": 0.022306540269261748,
+    "roc_auc": 0.3533258441041749,
+    "logloss": 6.094500285892321,
+    "brier_score": 0.9758788169785899,
+    "true_positive_gain": 20150,
+    "false_negative_cost": -7100,
+    "false_positive_cost": -436520
+  },
+  "unknown_categories": {
+    "category": 0,
+    "hour": 0,
+    "job": 11,
+    "city": 0,
+    "zip": 11
+  }
+}

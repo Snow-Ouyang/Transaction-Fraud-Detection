@@ -1,0 +1,15 @@
+﻿family,run_id,group,name,features,mean_paired_change_per_10000,improved_windows,accepted
+catboost,CB__velocity,velocity,一小时交易密度与商户分散,11,126.00805320702064,3,True
+catboost,CB__recent_amount,recent_amount,七日消费水平与长期偏离,11,700.3285090520618,3,True
+catboost,CB__hour_habit,hour_habit,个人交易时段习惯,10,117.42811106449237,3,True
+catboost,CB__category_context,category_context,类别与个人历史交叉,11,14.519614917381508,2,True
+catboost,CB__age_weekday,age_weekday,重新检验：年龄与星期,11,-3382.5426663963026,1,False
+catboost,CB__merchant,merchant,重新检验：商户名称,10,-25359.628516842524,0,False
+catboost,CB__identity,identity,重新检验：职业/城市/邮编,12,-1921.600681945464,1,False
+catboost,CB__combined,combined,通过组的合并检验,16,939.9289837675682,3,True
+xgboost,XGB__velocity,velocity,一小时交易密度与商户分散,14,290.26783758654824,3,True
+xgboost,XGB__recent_amount,recent_amount,七日消费水平与长期偏离,14,1151.3791394917275,3,True
+xgboost,XGB__hour_habit,hour_habit,个人交易时段习惯,13,-102.83946988905336,2,False
+xgboost,XGB__category_context,category_context,类别与个人历史交叉,14,68.51381944200402,2,True
+xgboost,XGB__identity,identity,重新检验：职业/城市/邮编,15,-113.45611664700918,1,False
+xgboost,XGB__combined,combined,通过组的合并检验,18,1386.4484630395,3,True

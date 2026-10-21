@@ -1,0 +1,7 @@
+﻿fold,model,n,maximum_abs_probability_difference
+D1,Logistic,1003,0.0
+D1,CatBoost,1003,0.0
+D2,Logistic,1018,0.0
+D2,CatBoost,1018,0.0
+D3,Logistic,1005,0.0
+D3,CatBoost,1005,0.0

@@ -1,0 +1,44 @@
+{
+  "selected_run": "core_d6_l10",
+  "ranked_candidates": [
+    {
+      "run_id": "core_d6_l10",
+      "depth": 6,
+      "l2_leaf_reg": 10,
+      "mean_delta_per_10000": -19253.073054554367,
+      "worst_delta_per_10000": -31725.394077038967,
+      "windows_above_always_normal": 0
+    },
+    {
+      "run_id": "core_default",
+      "depth": 6,
+      "l2_leaf_reg": 3,
+      "mean_delta_per_10000": -19512.49898506918,
+      "worst_delta_per_10000": -31962.852195813004,
+      "windows_above_always_normal": 0
+    },
+    {
+      "run_id": "core_d4_l10",
+      "depth": 4,
+      "l2_leaf_reg": 10,
+      "mean_delta_per_10000": -19577.2282288179,
+      "worst_delta_per_10000": -31387.421015942975,
+      "windows_above_always_normal": 0
+    },
+    {
+      "run_id": "core_d4_l3",
+      "depth": 4,
+      "l2_leaf_reg": 3,
+      "mean_delta_per_10000": -19666.409919123584,
+      "worst_delta_per_10000": -31477.36727305435,
+      "windows_above_always_normal": 0
+    }
+  ],
+  "signature": {
+    "protocol_sha256": "860c0b57580545cec2f12fdb5b02d733589ba750dadbf6f007c733c8a58c0c98",
+    "source_sha256": "28d40f15f0a8db05595e8d9c17d386cdd82d9c26805687894e3cf2820d0368fd",
+    "feature_code_sha256": "79e1bdd9c0e42187b0171f2b6f46bf0332a9e85b8056e25cadc99bc40c5d84a9",
+    "runner_sha256": "4b35a8a0afe5b283921bd3a3ca53f616b734e8335849b1550ea436da2d9eef59"
+  },
+  "selected_before_feature_trials": true
+}

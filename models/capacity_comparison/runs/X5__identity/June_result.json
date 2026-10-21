@@ -1,0 +1,43 @@
+{
+  "run_id": "X5__identity",
+  "family": "xgboost",
+  "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+  "generated_utc": "2026-10-21T20:29:28+00:00",
+  "role": "reused_diagnostic_not_blind_test",
+  "selected": {
+    "n": 87778,
+    "fraud": 474,
+    "normal": 87304,
+    "threshold": 0.03254704549908638,
+    "TP": 421,
+    "FP": 87286,
+    "FN": 53,
+    "TN": 18,
+    "flags": 87707,
+    "utility": -420680,
+    "always_normal_utility": -47400,
+    "delta_vs_always_normal": -373280,
+    "utility_per_10000": -47925.44829000433,
+    "delta_per_10000": -42525.46196085579,
+    "precision": 0.004800072970230426,
+    "recall": 0.8881856540084389,
+    "false_positive_rate": 0.9997938238797764,
+    "false_positives_per_10000_normal": 9997.938238797764,
+    "accuracy": 0.005001253161384401,
+    "f1": 0.009548542202968894,
+    "average_precision": 0.20805713845805246,
+    "roc_auc": 0.691557116874892,
+    "logloss": 1.3072778491434107,
+    "brier_score": 0.4084674149853563,
+    "true_positive_gain": 21050,
+    "false_negative_cost": -5300,
+    "false_positive_cost": -436430
+  },
+  "unknown_categories": {
+    "category": 0,
+    "hour": 0,
+    "job": 11,
+    "city": 0,
+    "zip": 11
+  }
+}

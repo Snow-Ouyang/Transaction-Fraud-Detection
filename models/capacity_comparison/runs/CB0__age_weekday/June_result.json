@@ -1,0 +1,41 @@
+{
+  "run_id": "CB0__age_weekday",
+  "family": "catboost",
+  "selection_lock_sha256": "9f6bca28e63d02bfc6add030eb53ff9d0ea31c863c681eaa2d99ea1631adfeae",
+  "generated_utc": "2026-10-21T20:29:20+00:00",
+  "role": "reused_diagnostic_not_blind_test",
+  "selected": {
+    "n": 87778,
+    "fraud": 474,
+    "normal": 87304,
+    "threshold": 0.016170625243606462,
+    "TP": 417,
+    "FP": 87304,
+    "FN": 57,
+    "TN": 0,
+    "flags": 87721,
+    "utility": -421370,
+    "always_normal_utility": -47400,
+    "delta_vs_always_normal": -373970,
+    "utility_per_10000": -48004.055685934974,
+    "delta_per_10000": -42604.06935678644,
+    "precision": 0.004753707778069105,
+    "recall": 0.879746835443038,
+    "false_positive_rate": 1.0,
+    "false_positives_per_10000_normal": 10000.0,
+    "accuracy": 0.004750620884504089,
+    "f1": 0.009456318385395998,
+    "average_precision": 0.10902654416501027,
+    "roc_auc": 0.5140063470927138,
+    "logloss": 4.626497417387286,
+    "brier_score": 0.9485117539050886,
+    "true_positive_gain": 20850,
+    "false_negative_cost": -5700,
+    "false_positive_cost": -436520
+  },
+  "unknown_categories": {
+    "category": 0,
+    "hour": 0,
+    "weekday": 0
+  }
+}

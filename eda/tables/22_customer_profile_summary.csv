@@ -1,0 +1,4 @@
+﻿profile,customers,transactions,fraud
+fraud_only,150,1452,1452
+mixed,937,1383559,9141
+normal_only,12,17985,0

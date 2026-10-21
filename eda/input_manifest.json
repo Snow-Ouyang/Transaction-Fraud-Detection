@@ -1,0 +1,42 @@
+{
+  "sources": {
+    "fraudTrain.csv": {
+      "sha256": "28d40f15f0a8db05595e8d9c17d386cdd82d9c26805687894e3cf2820d0368fd",
+      "bytes": 376853309
+    },
+    "fraudTest.csv": {
+      "sha256": "ca9c0384dcc559c78210749345779dc744c9ab36e648feea660aef431a6a1cce",
+      "bytes": 120300750
+    },
+    "ISYE 7406 Project Description.pdf": {
+      "sha256": "dd91700489d33a41c7bf567c9f5ad18f4988b957769d3f64fed273cb387c8a26",
+      "bytes": 253116
+    }
+  },
+  "analysis_script_sha256": "47ddb3ee75dc22b844939b8fbf4d3d4bfef03949e070b6d740ad17cca0ffba44",
+  "checks": {
+    "expected_train_rows": true,
+    "expected_test_rows": true,
+    "train_label_binary": true,
+    "test_has_no_label": true,
+    "monthly_train_rows_reconcile": true,
+    "monthly_test_rows_reconcile": true,
+    "category_fraud_reconciles": true,
+    "customer_profile_rows_reconcile": true,
+    "customer_profile_fraud_reconcile": true,
+    "train_text_and_unix_match": true,
+    "test_minute_and_unix_match": true,
+    "train_test_transactions_disjoint": true,
+    "joint_category_month_counts_reconcile": true,
+    "joint_category_month_fraud_reconcile": true,
+    "finite_raw_numeric_fields": true,
+    "row_count_preserved": true,
+    "strict_past_count_nonnegative": true,
+    "count24_within_past_count": true,
+    "distinct_timestamp_previous_gap_positive": true,
+    "all_first_events_have_no_past_mean": true,
+    "independent_history_spot_checks": true,
+    "sources_unchanged": true
+  },
+  "seed": 7406
+}

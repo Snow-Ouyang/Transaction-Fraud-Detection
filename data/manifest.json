@@ -1,0 +1,23 @@
+{
+  "source": "Original course competition files supplied by the project owner; exact unmodified bytes, stored with Git LFS.",
+  "files": [
+    {
+      "path": "fraudTrain.csv",
+      "rows": 1402996,
+      "columns": 23,
+      "bytes": 376853309,
+      "sha256": "28d40f15f0a8db05595e8d9c17d386cdd82d9c26805687894e3cf2820d0368fd",
+      "start": "2024-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "path": "fraudTest.csv",
+      "rows": 469843,
+      "columns": 22,
+      "bytes": 120300750,
+      "sha256": "ca9c0384dcc559c78210749345779dc744c9ab36e648feea660aef431a6a1cce",
+      "start": "2025-07-01",
+      "end": "2025-12-31"
+    }
+  ]
+}

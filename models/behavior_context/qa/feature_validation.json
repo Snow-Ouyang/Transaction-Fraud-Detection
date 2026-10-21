@@ -1,0 +1,39 @@
+{
+  "checks": {
+    "label_free_function_input": true,
+    "direct_independent_spots": true,
+    "future_append_prefix_invariance": true,
+    "all_boundary_tests_passed": true,
+    "no_infinite_features": true,
+    "distinct_no_more_than_count": true,
+    "share_in_unit_interval": true
+  },
+  "independent_spots": 44,
+  "prefix_rows": 682991,
+  "prefix_checks": {
+    "count_1h": true,
+    "distinct_merchants_1h": true,
+    "amount_to_mean_7d": true,
+    "mean_7d_to_past_mean": true,
+    "hour_unusualness": true,
+    "category_past_share": true,
+    "amount_to_shrunk_category_mean": true
+  },
+  "boundary_checks": {
+    "exact_one_hour_inclusive": true,
+    "same_second_excluded": true,
+    "just_older_than_one_hour_excluded": true,
+    "seven_day_lower_boundary_inclusive": true,
+    "seven_day_oldest_excluded_after_one_second": true
+  },
+  "new_features": [
+    "count_1h",
+    "distinct_merchants_1h",
+    "amount_to_mean_7d",
+    "mean_7d_to_past_mean",
+    "hour_unusualness",
+    "category_past_share",
+    "amount_to_shrunk_category_mean"
+  ],
+  "category_shrinkage_alpha": 5.0
+}

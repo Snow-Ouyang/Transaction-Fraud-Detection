@@ -1,0 +1,22 @@
+{
+  "source": "C:\\Users\\FeixueOuyang\\Desktop\\course project\\data mining\\ISYE 7406 Project Description.pdf",
+  "source_sha256": "dd91700489d33a41c7bf567c9f5ad18f4988b957769d3f64fed273cb387c8a26",
+  "official_score": "Total Utility = 50TP - 100FN - 5FP",
+  "higher_is_better": true,
+  "public_test_fraction_approx": 0.3,
+  "private_test_fraction_approx": 0.7,
+  "source_pages": [
+    2,
+    3
+  ],
+  "local_primary_ranking": "Equal-window mean utility per10000; baseline-relative representation differs only by a candidate-independent constant.",
+  "auxiliary": [
+    "false_positive_rate",
+    "recall",
+    "precision",
+    "AP",
+    "ROC_AUC"
+  ],
+  "selection_policy_unchanged": true,
+  "note": "Both mean gain and >=2/3 improved-window conditions use score; no auxiliary-metric veto."
+}

@@ -1,0 +1,7 @@
+﻿fold,model,fit_n,fit_fraud,fit_seconds,iterations,model_file,model_sha256,converged
+D1,Logistic,682991,5324,7.134139060974121,319,artifacts\D1_logistic.joblib,2e08c6f6c8ccae0b8d5f9a1435485b5b1060f0ea7f55c46cfb7739092e1c5561,True
+D1,CatBoost,682991,5324,31.625732898712158,500,artifacts\D1_catboost.cbm,0cbce067f765f8fb61098c895fde59a44710639f61b9519e3bef13d063201f99,True
+D2,Logistic,979566,7221,10.165077924728394,314,artifacts\D2_logistic.joblib,e80030efe7e61dc5d543d007ec7b1fd603f85ac63e8e14d23cd79c4f5abf5d73,True
+D2,CatBoost,979566,7221,42.75948214530945,500,artifacts\D2_catboost.cbm,1d79a907ad5925636b87d2b0073ea4f12a5f5c2b0d1d8b3edbd681dedf7727ce,True
+D3,Logistic,1161367,9033,13.312280893325806,353,artifacts\D3_logistic.joblib,5b1afc4590a776efa61a8f043b6b1c9cb8dfa5e0f721b11831756a71eb935f86,True
+D3,CatBoost,1161367,9033,50.84643816947937,500,artifacts\D3_catboost.cbm,df94fb10708ef21f96309e682c4ba8d2eecdecd3f64a19ea0dcad0c7adcd54cf,True

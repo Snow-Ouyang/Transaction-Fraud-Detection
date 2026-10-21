@@ -1,0 +1,17 @@
+{
+  "tables": {
+    "metrics": 112,
+    "run_summary": 16,
+    "feature_groups": 14,
+    "paired_changes": 56,
+    "score_distributions": 224,
+    "category_errors": 1568,
+    "error_feature_profiles": 224,
+    "new_feature_distributions": 14,
+    "fits": 48,
+    "score_rankings": 16
+  },
+  "figures": 5,
+  "no_fits": true,
+  "no_future_threshold_optimization": true
+}

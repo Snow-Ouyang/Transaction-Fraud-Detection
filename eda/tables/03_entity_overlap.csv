@@ -1,0 +1,14 @@
+﻿metric,value
+train_cards,1099
+test_raw_card_tokens,1071
+train_customers,1099
+test_customers,1097
+shared_customers,1096
+new_test_customers,1
+new_test_customer_rows,551
+new_test_merchant_rows,0
+raw_card_token_shared,5
+rounded_6_significant_digit_collision_buckets,22
+static_key_multiple_training_cards,0
+trans_num_overlap,0
+ID_overlap,469843

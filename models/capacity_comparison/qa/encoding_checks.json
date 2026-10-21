@@ -1,0 +1,7 @@
+{
+  "v2_history_audit_passed": true,
+  "known_levels_consistent": true,
+  "future_unknown_mapped_missing": true,
+  "numeric_missing_preserved": true,
+  "future_vocab_not_learned": true
+}

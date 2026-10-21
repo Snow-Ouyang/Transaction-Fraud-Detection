@@ -1,0 +1,3 @@
+﻿family,run_id,features,config,mean_delta,positive_windows,june_utility,june_FP,june_recall,june_precision,june_fpr
+catboost,CB5,10,深度 10、500 棵树、L2=30,-18330.27574711097,0,-419420,87304,0.9071729957805909,0.0049011785624729,1.0
+xgboost,X5__combined,13,深度 10、500 棵树、L2=30、min_child_weight=5,-16974.245125851423,1,-419390,87088,0.8924050632911392,0.004833678051902,0.997525886557317

@@ -1,0 +1,13 @@
+{
+  "train_category_month_csv_reader_reconciliation": true,
+  "train_positive_csv_reader_reconciliation": true,
+  "test_category_month_csv_reader_reconciliation": true,
+  "all_22_images_embedded": true,
+  "all_local_report_links_resolve": true,
+  "all_png_files_valid": true,
+  "all_23_original_features_documented": true,
+  "test_monthly_labels_remain_missing": true,
+  "all_passed": true,
+  "sources_unchanged_at_delivery": true,
+  "all_22_figures_visually_reviewed": true
+}

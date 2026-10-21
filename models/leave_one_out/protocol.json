@@ -1,0 +1,1251 @@
+{
+  "seed": 7406,
+  "categorical_features": [
+    "category",
+    "hour",
+    "weekday",
+    "merchant",
+    "job",
+    "city",
+    "zip"
+  ],
+  "catboost_fixed": {
+    "learning_rate": 0.05,
+    "loss_function": "Logloss",
+    "boosting_type": "Plain",
+    "has_time": true,
+    "counter_calc_method": "SkipTest",
+    "task_type": "CPU",
+    "thread_count": 4,
+    "allow_writing_files": false
+  },
+  "xgboost_fixed": {
+    "learning_rate": 0.05,
+    "objective": "binary:logistic",
+    "eval_metric": "logloss",
+    "tree_method": "hist",
+    "device": "cpu",
+    "n_jobs": 4,
+    "enable_categorical": true,
+    "max_cat_to_onehot": 4,
+    "max_cat_threshold": 64,
+    "max_bin": 256,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "reg_alpha": 0.0,
+    "gamma": 0.0,
+    "scale_pos_weight": 1.0,
+    "verbosity": 1
+  },
+  "folds": [
+    {
+      "name": "D1",
+      "fit_end": "2024-10-01",
+      "threshold_end": "2024-11-01",
+      "dev_start": "2024-11-01",
+      "dev_end": "2025-01-01"
+    },
+    {
+      "name": "D2",
+      "fit_end": "2025-01-01",
+      "threshold_end": "2025-02-01",
+      "dev_start": "2025-02-01",
+      "dev_end": "2025-04-01"
+    },
+    {
+      "name": "D3",
+      "fit_end": "2025-04-01",
+      "threshold_end": "2025-05-01",
+      "dev_start": "2025-05-01",
+      "dev_end": "2025-06-01"
+    }
+  ],
+  "utility": {
+    "TP": 50,
+    "FN": -100,
+    "FP": -5,
+    "TN": 0
+  },
+  "experiment": "v6_leave_one_input_out",
+  "workers": 4,
+  "primary": "Equal-window mean absolute score/10000, higher is better. Also report pooled total score.",
+  "stability": "Flag robust improvement only if mean paired score gain>0 and >=2/3 windows improve. Report mean-positive but mixed cases too.",
+  "joint": "After all singles: one union of all mean-positive drops, and one union of robust-positive drops. Only >=2 drops; identical sets deduplicated; singleton sets reuse their leave-one-out fit. No further subsets or iterative elimination.",
+  "selection": "Primary score leader among baseline, every single drop and predeclared joint drops. Separately report best robust-improvement candidate. No auxiliary metric veto.",
+  "thresholds": "Per run/fold exact score maximum on preceding calibration window only; equal optima fewer flags; never optimize on development or June.",
+  "interpretation": "Delete model input columns only. Other derived features remain unchanged, even if they encode related information. This is input-representation robustness, not deletion of the raw information source.",
+  "june": "Previously observed diagnostic only; new June predictions only after all score choices locked. No reselection.",
+  "official_test": "No loading, predictions, submission or upload.",
+  "output": "Compact Markdown results and necessary model/parameter/prediction logs. No HTML or visualization.",
+  "baselines": {
+    "catboost": {
+      "source_run": "CB__combined",
+      "tag": "CB",
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      }
+    },
+    "xgboost": {
+      "source_run": "XGB__combined",
+      "tag": "XGB",
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      }
+    }
+  },
+  "jobs": [
+    {
+      "run_id": "CB__drop__amt",
+      "family": "catboost",
+      "dropped": [
+        "amt"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__hour",
+      "family": "catboost",
+      "dropped": [
+        "hour"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__amount_to_past_mean",
+      "family": "catboost",
+      "dropped": [
+        "amount_to_past_mean"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__has_customer_history",
+      "family": "catboost",
+      "dropped": [
+        "has_customer_history"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__past_count",
+      "family": "catboost",
+      "dropped": [
+        "past_count"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__past_mean_amt",
+      "family": "catboost",
+      "dropped": [
+        "past_mean_amt"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__gap_seconds",
+      "family": "catboost",
+      "dropped": [
+        "gap_seconds"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__count_24h",
+      "family": "catboost",
+      "dropped": [
+        "count_24h"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__new_merchant",
+      "family": "catboost",
+      "dropped": [
+        "new_merchant"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__count_1h",
+      "family": "catboost",
+      "dropped": [
+        "count_1h"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__distinct_merchants_1h",
+      "family": "catboost",
+      "dropped": [
+        "distinct_merchants_1h"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__amount_to_mean_7d",
+      "family": "catboost",
+      "dropped": [
+        "amount_to_mean_7d"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__mean_7d_to_past_mean",
+      "family": "catboost",
+      "dropped": [
+        "mean_7d_to_past_mean"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "hour_unusualness",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__hour_unusualness",
+      "family": "catboost",
+      "dropped": [
+        "hour_unusualness"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__category_past_share",
+      "family": "catboost",
+      "dropped": [
+        "category_past_share"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "CB__drop__amount_to_shrunk_category_mean",
+      "family": "catboost",
+      "dropped": [
+        "amount_to_shrunk_category_mean"
+      ],
+      "config": {
+        "id": "CB5",
+        "iterations": 500,
+        "depth": 10,
+        "l2_leaf_reg": 30
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "hour_unusualness",
+        "category_past_share"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__amt",
+      "family": "xgboost",
+      "dropped": [
+        "amt"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__hour",
+      "family": "xgboost",
+      "dropped": [
+        "hour"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__amount_to_past_mean",
+      "family": "xgboost",
+      "dropped": [
+        "amount_to_past_mean"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__has_customer_history",
+      "family": "xgboost",
+      "dropped": [
+        "has_customer_history"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__past_count",
+      "family": "xgboost",
+      "dropped": [
+        "past_count"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__past_mean_amt",
+      "family": "xgboost",
+      "dropped": [
+        "past_mean_amt"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__gap_seconds",
+      "family": "xgboost",
+      "dropped": [
+        "gap_seconds"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__count_24h",
+      "family": "xgboost",
+      "dropped": [
+        "count_24h"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__new_merchant",
+      "family": "xgboost",
+      "dropped": [
+        "new_merchant"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__age",
+      "family": "xgboost",
+      "dropped": [
+        "age"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__weekday",
+      "family": "xgboost",
+      "dropped": [
+        "weekday"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__merchant",
+      "family": "xgboost",
+      "dropped": [
+        "merchant"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__count_1h",
+      "family": "xgboost",
+      "dropped": [
+        "count_1h"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__distinct_merchants_1h",
+      "family": "xgboost",
+      "dropped": [
+        "distinct_merchants_1h"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__amount_to_mean_7d",
+      "family": "xgboost",
+      "dropped": [
+        "amount_to_mean_7d"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "mean_7d_to_past_mean",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__mean_7d_to_past_mean",
+      "family": "xgboost",
+      "dropped": [
+        "mean_7d_to_past_mean"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "category_past_share",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__category_past_share",
+      "family": "xgboost",
+      "dropped": [
+        "category_past_share"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "amount_to_shrunk_category_mean"
+      ],
+      "kind": "single"
+    },
+    {
+      "run_id": "XGB__drop__amount_to_shrunk_category_mean",
+      "family": "xgboost",
+      "dropped": [
+        "amount_to_shrunk_category_mean"
+      ],
+      "config": {
+        "id": "X5",
+        "n_estimators": 500,
+        "max_depth": 10,
+        "reg_lambda": 30,
+        "min_child_weight": 5
+      },
+      "features": [
+        "amt",
+        "hour",
+        "amount_to_past_mean",
+        "has_customer_history",
+        "past_count",
+        "past_mean_amt",
+        "gap_seconds",
+        "count_24h",
+        "new_merchant",
+        "age",
+        "weekday",
+        "merchant",
+        "count_1h",
+        "distinct_merchants_1h",
+        "amount_to_mean_7d",
+        "mean_7d_to_past_mean",
+        "category_past_share"
+      ],
+      "kind": "single"
+    }
+  ]
+}

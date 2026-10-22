@@ -1,0 +1,5 @@
+data/
+catboost_info/
+outputs/feats.pkl
+outputs/oof.csv
+__pycache__/

@@ -1,0 +1,39 @@
+{
+  "features": [
+    "amt",
+    "hour",
+    "past_count",
+    "gap_seconds",
+    "count_24h",
+    "merchant",
+    "amount_to_mean_7d",
+    "mean_7d_to_past_mean",
+    "category_past_share",
+    "amount_excess_recent7d",
+    "hour_activity_acceleration",
+    "gap_recent_activity_scale",
+    "category_history_count",
+    "hour_sin",
+    "hour_cos",
+    "logamt_vs_global_category_7d",
+    "personal_sum_24h",
+    "amt_over_personal_max",
+    "personal_std_prior",
+    "personal_ncat_24h",
+    "personal_night_share",
+    "home_merchant_km",
+    "previous_merchant_km",
+    "merchant_speed_kmh",
+    "global_state_share_1d",
+    "peer__rel_category_1d",
+    "nf_seq_last5_category_diversity",
+    "nf_last5_mean_regime",
+    "nf_seq_previous_amount_z",
+    "bc3_category_past_share_transition_context_z"
+  ],
+  "categorical_features": [
+    "hour",
+    "merchant"
+  ]
+}
+
